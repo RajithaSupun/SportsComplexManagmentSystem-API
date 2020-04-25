@@ -67,11 +67,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 } else {
                     employeeVO.setGenderName("");
                 }
-
-
                 employeeVOList.add(employeeVO);
-
-
             }
             return employeeVOList;
         } catch (Exception e) {
