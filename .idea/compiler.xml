@@ -16,6 +16,7 @@
       <module name="service" target="1.8" />
       <module name="web" target="1.8" />
       <module name="Wijaya_Sports_Complex_API" target="1.8" />
+      <module name="wijaya_sports_complex_management_system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
