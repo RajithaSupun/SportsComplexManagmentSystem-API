@@ -22,11 +22,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     CommonFunctionImpl commonFunction;
     @Autowired
     GenderDao genderDao;
+
     @Override
     public EmployeeVO createEmployee(EmployeeVO employeeVO) throws Exception {
         try {
-            Employee employee=new Employee();
-            Gender gender=genderDao.get(employeeVO.getGenderId());
+            Employee employee = new Employee();
+            Gender gender = genderDao.get(employeeVO.getGenderId());
             employee.setFirstName(employeeVO.getFirstName());
             employee.setLastName(employeeVO.getLastName());
             employee.setAddress(employeeVO.getAddress());
@@ -39,37 +40,41 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeDao.save(employee);
             return employeeVO;
 
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
 
     @Override
     public List<EmployeeVO> getAllEmployee() throws Exception {
-        List<EmployeeVO> employeeVOList=new ArrayList<>();
+        List<EmployeeVO> employeeVOList = new ArrayList<>();
         try {
-           List<Employee>employeeList=employeeDao.getAll();
-            for (Employee employee:employeeList) {
-                EmployeeVO employeeVO=new EmployeeVO();
-                employeeVO.setFirstName(employee.getFirstName());
-                employeeVO.setLastName(employee.getLastName());
-                employeeVO.setAddress(employee.getAddress());
-                employeeVO.setDateOfBirth(commonFunction.convertDateToString(employee.getDateOfBirth()));
-                employeeVO.setNic(employee.getNic());
-                employeeVO.setJoinedDate(commonFunction.convertDateToString(employee.getJoin_Date()));
-                employeeVO.setMobileNumber(employee.getMobile_Number());
-                employeeVO.setLandPhoneNumber(employee.getLandphone_Number());
-                Gender gender=genderDao.get(employee.getGender().getId());
-                employeeVO.setGenderName(gender.getGenderName());
+            List<Employee> employeeList = employeeDao.getAll();
+            for (Employee employee : employeeList) {
+                EmployeeVO employeeVO = new EmployeeVO();
+                employeeVO.setFirstName(employee.getFirstName() == null ? "" : employee.getFirstName());
+                employeeVO.setLastName(employee.getLastName() == null ? "" : employee.getLastName());
+                employeeVO.setAddress(employee.getAddress() == null ? "" : employee.getAddress());
+                employeeVO.setDateOfBirth(employee.getDateOfBirth() == null ? "" : commonFunction.convertDateToString(employee.getDateOfBirth()));
+                employeeVO.setNic(employee.getNic() == null ? "" : employee.getNic());
+                employeeVO.setJoinedDate(employee.getJoin_Date() == null ? "" : commonFunction.convertDateToString(employee.getJoin_Date()));
+                employeeVO.setMobileNumber(employee.getMobile_Number() == null ? "" : employee.getMobile_Number());
+                employeeVO.setLandPhoneNumber(employee.getLandphone_Number() == null ? "" : employee.getLandphone_Number());
+                if (employee.getGender() != null) {
+                    Gender gender = genderDao.get(employee.getGender().getId());
+                    employeeVO.setGenderName(gender == null ? null : gender.getGenderName());
+                    employeeVO.setGenderId(gender.getId());
+                } else {
+                    employeeVO.setGenderName("");
+                }
+
 
                 employeeVOList.add(employeeVO);
 
 
             }
             return employeeVOList;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
