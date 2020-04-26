@@ -79,14 +79,33 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeVO deleteEmployee(Long id) throws Exception {
         try {
             EmployeeVO employeeVO = new EmployeeVO();
-            Employee employee =employeeDao.get(id);
+            Employee employee = employeeDao.get(id);
             employee.setDelete(true);
-            Long deleteId =employeeDao.save(employee);
+            Long deleteId = employeeDao.save(employee);
             employeeVO.setEmployeeId(deleteId);
 
             return employeeVO;
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    @Override
+    public EmployeeVO editEmployee(EmployeeVO employeeVO) throws Exception {
+        try {
+            Employee employee = employeeDao.get(employeeVO.getEmployeeId());
+            employee.setFirstName(employeeVO.getFirstName());
+            employee.setLastName(employeeVO.getLastName());
+            employee.setDateOfBirth(commonFunction.getDateTimeByDateString(employeeVO.getDateOfBirth()));
+            employee.setLandphone_Number(employeeVO.getLandPhoneNumber());
+            employee.setMobile_Number(employeeVO.getMobileNumber());
+
+            employeeDao.save(employee);
+            return employeeVO;
+
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
 }
