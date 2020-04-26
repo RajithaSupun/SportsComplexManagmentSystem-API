@@ -7,4 +7,5 @@ import java.util.List;
 public interface EmployeeService {
     EmployeeVO createEmployee(EmployeeVO employeeVO) throws Exception;
     List<EmployeeVO> getAllEmployee() throws Exception;
+    EmployeeVO deleteEmployee(Long id) throws Exception;
 }

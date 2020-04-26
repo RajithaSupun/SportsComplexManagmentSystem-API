@@ -49,7 +49,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<EmployeeVO> getAllEmployee() throws Exception {
         List<EmployeeVO> employeeVOList = new ArrayList<>();
         try {
-            List<Employee> employeeList = employeeDao.getAll();
+            List<Employee> employeeList = employeeDao.getAllEmployee();
             for (Employee employee : employeeList) {
                 EmployeeVO employeeVO = new EmployeeVO();
                 employeeVO.setFirstName(employee.getFirstName() == null ? "" : employee.getFirstName());
@@ -70,6 +70,21 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeVOList.add(employeeVO);
             }
             return employeeVOList;
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
+    public EmployeeVO deleteEmployee(Long id) throws Exception {
+        try {
+            EmployeeVO employeeVO = new EmployeeVO();
+            Employee employee =employeeDao.get(id);
+            employee.setDelete(true);
+            Long deleteId =employeeDao.save(employee);
+            employeeVO.setEmployeeId(deleteId);
+
+            return employeeVO;
         } catch (Exception e) {
             throw e;
         }

@@ -53,4 +53,23 @@ public class EmployeeController {
         }
 
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public ResponseEntity<Object> deleteEmployee(@PathVariable("id") Long id) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            EmployeeVO deletedEmployee = employeeService.deleteEmployee(id);
+            returnVO.setResult(deletedEmployee);
+            returnVO.setSuccess(true);
+            returnVO.setStatusCode(200);
+            return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+
+    }
 }

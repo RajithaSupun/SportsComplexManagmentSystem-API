@@ -45,6 +45,10 @@ public class Employee extends BaseObject implements Serializable {
     private String landphone_Number;
 
     @Basic
+    @Column(name = "is_delete",nullable = false,columnDefinition = "boolean default false")
+    private boolean isDelete;
+
+    @Basic
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gender_id")
     @JsonIgnore
@@ -117,6 +121,7 @@ public class Employee extends BaseObject implements Serializable {
         this.nic = nic;
     }
 
-
+    public boolean isDelete() { return isDelete; }
+    public void setDelete(boolean delete) { isDelete = delete; }
 }
 
