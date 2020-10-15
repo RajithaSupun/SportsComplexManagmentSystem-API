@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.create_vision.wijaya_sports</groupId>
             <artifactId>dao</artifactId>
-            <version>${sportComplex.version}</version>
+            <version>${sivilima.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -54,7 +54,7 @@
     </dependencies>
 
     <build>
-        <finalName>sportComplex-service</finalName>
+        <finalName>sivilima-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

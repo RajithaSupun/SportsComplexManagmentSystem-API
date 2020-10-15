@@ -1,7 +1,6 @@
 package com.createvision.wijaya_sports.valuesObject;
 
 public class EmployeeVO {
-    private Long employeeId;
     private String firstName;
     private  String lastName;
     private  String address;
@@ -12,10 +11,7 @@ public class EmployeeVO {
     private String joinedDate;
     private String designation;
     private String mobileNumber;
-    private String landPhoneNumber;
-
-    public Long getEmployeeId() { return employeeId; }
-    public void setEmployeeId(Long employeeId) { this.employeeId = employeeId; }
+    private  String landPhoneNumber;
 
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }

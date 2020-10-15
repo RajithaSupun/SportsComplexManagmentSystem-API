@@ -132,7 +132,7 @@
     </dependencyManagement>
 
     <properties>
-        <sportComplex.version>1.0.1</sportComplex.version>
+        <sivilima.version>1.0.1</sivilima.version>
         <spring.version>4.1.6.RELEASE</spring.version>
         <slf4j.version>1.7.2</slf4j.version>
         <junit.version>4.9</junit.version>
@@ -147,7 +147,7 @@
     </properties>
 
     <build>
-        <finalName>sportComplex</finalName>
+        <finalName>sivilima</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
