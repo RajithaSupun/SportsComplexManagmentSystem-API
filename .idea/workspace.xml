@@ -8,28 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="add new values object and remove unwanted values object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/GenderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/GenderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/EmployeeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/GenderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/GenderDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/EmployeeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/EmployeeVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/CommonFunctionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/CommonFunctionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" afterDir="false" />
@@ -206,6 +187,11 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
             </expand>
             <select />
           </treeState>
@@ -239,7 +225,8 @@
       <workItem from="1587795216707" duration="9554000" />
       <workItem from="1602085048935" duration="2714000" />
       <workItem from="1602777798545" duration="408000" />
-      <workItem from="1602778609178" duration="241000" />
+      <workItem from="1602778609178" duration="1475000" />
+      <workItem from="1603381642217" duration="1631000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -367,7 +354,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602777897454</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add new file for employees add">
+      <created>1602779070647</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602779070648</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add member function">
+      <created>1602780363809</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602780363809</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,81 +390,83 @@
     <MESSAGE value="add new quarry to get all employee without delete and add new controller to delete employee" />
     <MESSAGE value="add edit controller to edit Employee" />
     <MESSAGE value="test git commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test git commit" />
+    <MESSAGE value="add new file for employees add" />
+    <MESSAGE value="add member function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add member function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602087130692">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="188" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1602087130692" />
-    <state x="190" y="130" key="CommitChangelistDialog2" timestamp="1602778852628">
+    <state x="190" y="130" key="CommitChangelistDialog2" timestamp="1603381839979">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="190" y="130" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1602778852628" />
-    <state width="1331" height="404" key="GridCell.Tab.0.bottom" timestamp="1602095395528">
+    <state x="190" y="130" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1603381839979" />
+    <state width="1331" height="404" key="GridCell.Tab.0.bottom" timestamp="1603386126347">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395528" />
+    <state width="1331" height="404" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126347" />
     <state width="1331" height="404" key="GridCell.Tab.0.bottom/0.23.1680.959@0.23.1680.959" timestamp="1602087097865" />
-    <state width="1331" height="404" key="GridCell.Tab.0.center" timestamp="1602095395528">
+    <state width="1331" height="404" key="GridCell.Tab.0.center" timestamp="1603386126346">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395528" />
+    <state width="1331" height="404" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126346" />
     <state width="1331" height="404" key="GridCell.Tab.0.center/0.23.1680.959@0.23.1680.959" timestamp="1602087097863" />
-    <state width="1331" height="404" key="GridCell.Tab.0.left" timestamp="1602095395527">
+    <state width="1331" height="404" key="GridCell.Tab.0.left" timestamp="1603386126345">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395527" />
+    <state width="1331" height="404" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126345" />
     <state width="1331" height="404" key="GridCell.Tab.0.left/0.23.1680.959@0.23.1680.959" timestamp="1602087097862" />
-    <state width="1331" height="404" key="GridCell.Tab.0.right" timestamp="1602095395528">
+    <state width="1331" height="404" key="GridCell.Tab.0.right" timestamp="1603386126347">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395528" />
+    <state width="1331" height="404" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126347" />
     <state width="1331" height="404" key="GridCell.Tab.0.right/0.23.1680.959@0.23.1680.959" timestamp="1602087097864" />
-    <state width="1331" height="404" key="GridCell.Tab.1.bottom" timestamp="1602095395530">
+    <state width="1331" height="404" key="GridCell.Tab.1.bottom" timestamp="1603386126350">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395530" />
+    <state width="1331" height="404" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126350" />
     <state width="1331" height="404" key="GridCell.Tab.1.bottom/0.23.1680.959@0.23.1680.959" timestamp="1602087097869" />
-    <state width="1331" height="404" key="GridCell.Tab.1.center" timestamp="1602095395529">
+    <state width="1331" height="404" key="GridCell.Tab.1.center" timestamp="1603386126349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395529" />
+    <state width="1331" height="404" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126349" />
     <state width="1331" height="404" key="GridCell.Tab.1.center/0.23.1680.959@0.23.1680.959" timestamp="1602087097867" />
-    <state width="1331" height="404" key="GridCell.Tab.1.left" timestamp="1602095395529">
+    <state width="1331" height="404" key="GridCell.Tab.1.left" timestamp="1603386126348">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395529" />
+    <state width="1331" height="404" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126348" />
     <state width="1331" height="404" key="GridCell.Tab.1.left/0.23.1680.959@0.23.1680.959" timestamp="1602087097866" />
-    <state width="1331" height="404" key="GridCell.Tab.1.right" timestamp="1602095395530">
+    <state width="1331" height="404" key="GridCell.Tab.1.right" timestamp="1603386126349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395530" />
+    <state width="1331" height="404" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126349" />
     <state width="1331" height="404" key="GridCell.Tab.1.right/0.23.1680.959@0.23.1680.959" timestamp="1602087097868" />
-    <state width="1331" height="404" key="GridCell.Tab.2.bottom" timestamp="1602095395532">
+    <state width="1331" height="404" key="GridCell.Tab.2.bottom" timestamp="1603386126367">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395532" />
+    <state width="1331" height="404" key="GridCell.Tab.2.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126367" />
     <state width="1331" height="404" key="GridCell.Tab.2.bottom/0.23.1680.959@0.23.1680.959" timestamp="1602087097872" />
-    <state width="1331" height="404" key="GridCell.Tab.2.center" timestamp="1602095395531">
+    <state width="1331" height="404" key="GridCell.Tab.2.center" timestamp="1603386126363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395531" />
+    <state width="1331" height="404" key="GridCell.Tab.2.center/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126363" />
     <state width="1331" height="404" key="GridCell.Tab.2.center/0.23.1680.959@0.23.1680.959" timestamp="1602087097870" />
-    <state width="1331" height="404" key="GridCell.Tab.2.left" timestamp="1602095395531">
+    <state width="1331" height="404" key="GridCell.Tab.2.left" timestamp="1603386126352">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395531" />
+    <state width="1331" height="404" key="GridCell.Tab.2.left/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126352" />
     <state width="1331" height="404" key="GridCell.Tab.2.left/0.23.1680.959@0.23.1680.959" timestamp="1602087097869" />
-    <state width="1331" height="404" key="GridCell.Tab.2.right" timestamp="1602095395531">
+    <state width="1331" height="404" key="GridCell.Tab.2.right" timestamp="1603386126366">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1331" height="404" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1602095395531" />
+    <state width="1331" height="404" key="GridCell.Tab.2.right/0.0.1680.1050@0.0.1680.1050" timestamp="1603386126366" />
     <state width="1331" height="404" key="GridCell.Tab.2.right/0.23.1680.959@0.23.1680.959" timestamp="1602087097871" />
-    <state x="440" y="266" key="Vcs.Push.Dialog.v2" timestamp="1602777901019">
+    <state x="440" y="266" key="Vcs.Push.Dialog.v2" timestamp="1602780366310">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="266" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1602777901019" />
+    <state x="440" y="266" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1602780366310" />
     <state x="623" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602094772749">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
