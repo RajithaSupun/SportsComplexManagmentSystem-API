@@ -37,18 +37,21 @@ public class MemberServiceImpl implements MemberService {
             member.setDateOfBirth(commonFunction.getDateTimeByDateString(memberVO.getDateOfBirth()));
             member.setGender(gender);
             member.setJoinDate(commonFunction.getDateTimeByDateString(memberVO.getJoinedDate()));
-            if (memberVO.getSportsId() == 1) {
-                member.setSports(Sports.BADMINTON);
-            }
-            else if (memberVO.getSportsId() == 2){
-                member.setSports(Sports.SWIMMING);
-            }
-            else {member.setSports(Sports.GYM);
-            }
-            return memberVO;
+            member.setSports(Sports.GYM);
+//            if (memberVO.getSportsId() == 1) {
+//                member.setSports(Sports.BADMINTON);
+//            }
+//            else if (memberVO.getSportsId() == 2){
+//                member.setSports(Sports.SWIMMING);
+//            }
+//            else {member.setSports(Sports.GYM);
+//            }
+            memberDao.save(member);
+
         }catch (Exception e)
         {
             throw e;
         }
+        return memberVO;
     }
 }

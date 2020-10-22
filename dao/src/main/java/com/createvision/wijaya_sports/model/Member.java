@@ -48,6 +48,16 @@ public class Member extends BaseObject implements Serializable {
     @JoinColumn(name = "fk_gender_id")
     private Gender gender;
 
+    @Basic
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_member_id")
+    private Measurement measurement;
+
+    @Basic
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_registration_fee_id")
+    private RegistrationFee registrationFee;
+
     public String getFirstName() {return firstName; }
     public void setFirstName(String firstName) {this.firstName = firstName;}
 
@@ -77,4 +87,10 @@ public class Member extends BaseObject implements Serializable {
 
     public Gender getGender() {return gender;}
     public void setGender(Gender gender) {this.gender = gender;}
+
+    public Measurement getMeasurement() {return measurement;}
+    public void setMeasurement(Measurement measurement) {this.measurement = measurement;}
+
+    public RegistrationFee getRegistrationFee() {return registrationFee;}
+    public void setRegistrationFee(RegistrationFee registrationFee) {this.registrationFee = registrationFee;}
 }
