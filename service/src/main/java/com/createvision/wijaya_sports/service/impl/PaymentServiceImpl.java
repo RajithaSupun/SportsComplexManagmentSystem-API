@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
 
 
     @Override
-    public List<PaymentVO> getAllReservation() throws Exception {
+    public List<PaymentVO> getAllPayment() throws Exception {
         try {
            List<PaymentVO> paymentVOList = new ArrayList<>();
            List<Payment> paymentList =paymentDao.getAll();

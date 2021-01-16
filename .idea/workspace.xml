@@ -10,25 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/PaymentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/ReservationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/PaymentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/dao/impl/ReservationDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/PaymentVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/ReservationVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/PaymentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/model/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/model/Member.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
@@ -265,7 +254,7 @@
       <workItem from="1603561711946" duration="266000" />
       <workItem from="1610250206765" duration="2176000" />
       <workItem from="1610599240427" duration="3592000" />
-      <workItem from="1610807719199" duration="5407000" />
+      <workItem from="1610807719199" duration="5943000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -421,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603389919973</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added two new API function of reservation and payment.">
+      <created>1610814902825</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1610814902825</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,6 +443,7 @@
     <MESSAGE value="add member function" />
     <MESSAGE value="commit un commit file" />
     <MESSAGE value="add two table" />
-    <option name="LAST_COMMIT_MESSAGE" value="add two table" />
+    <MESSAGE value="added two new API function of reservation and payment." />
+    <option name="LAST_COMMIT_MESSAGE" value="added two new API function of reservation and payment." />
   </component>
 </project>
