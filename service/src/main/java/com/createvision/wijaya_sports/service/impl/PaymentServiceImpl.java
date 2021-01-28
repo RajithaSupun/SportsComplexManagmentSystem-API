@@ -1,6 +1,8 @@
 package com.createvision.wijaya_sports.service.impl;
 
+import com.createvision.wijaya_sports.dao.MemberDao;
 import com.createvision.wijaya_sports.dao.PaymentDao;
+import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.model.Payment;
 import com.createvision.wijaya_sports.service.PaymentService;
 import com.createvision.wijaya_sports.valuesObject.PaymentVO;
@@ -21,15 +23,18 @@ public class PaymentServiceImpl implements PaymentService {
     @Autowired
     CommonFunctionImpl commonFunction;
 
+    @Autowired
+    MemberDao memberDao;
+
 
     @Override
     public List<PaymentVO> getAllPayment() throws Exception {
         try {
-           List<PaymentVO> paymentVOList = new ArrayList<>();
-           List<Payment> paymentList =paymentDao.getAll();
+            List<PaymentVO> paymentVOList = new ArrayList<>();
+            List<Payment> paymentList = paymentDao.getAll();
 
             for (Payment pay : paymentList) {
-                PaymentVO paymentVO =new PaymentVO();
+                PaymentVO paymentVO = new PaymentVO();
                 paymentVO.setAmount(pay.getAmount());
                 paymentVO.setDate(commonFunction.convertDateToString(pay.getDate()));
                 paymentVO.setMemberId(pay.getMember().getId());
@@ -39,17 +44,35 @@ public class PaymentServiceImpl implements PaymentService {
             }
 
             return paymentVOList;
-        }catch (Exception e){
-          throw e;
+        } catch (Exception e) {
+            throw e;
         }
 
     }
 
     @Override
-    public PaymentVO createReservation(PaymentVO paymentVO) throws Exception {
+    public PaymentVO updatePayment(PaymentVO paymentVO) throws Exception {
         try {
-            return null;
-        }catch (Exception e){
+            Payment payment = new Payment();
+            Member member = memberDao.get(paymentVO.getMemberId());
+            payment.setMember(member);
+            payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+            payment.setAmount(paymentVO.getAmount());
+            paymentDao.save(payment);
+            return paymentVO;
+
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
+    public void deletePayment(Long paymentId) throws Exception {
+
+        try {
+            Payment payment = paymentDao.get(paymentId);
+            paymentDao.delete(payment);
+        } catch (Exception e) {
             throw e;
         }
     }
