@@ -52,6 +52,8 @@ public class EmployeeServiceImpl implements EmployeeService {
            List<Employee>employeeList=employeeDao.getAll();
             for (Employee employee:employeeList) {
                 EmployeeVO employeeVO=new EmployeeVO();
+
+                employeeVO.setId(employee.getId());
                 employeeVO.setFirstName(employee.getFirstName());
                 employeeVO.setLastName(employee.getLastName());
                 employeeVO.setAddress(employee.getAddress());
