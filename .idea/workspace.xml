@@ -15,9 +15,7 @@
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/model/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/model/Member.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
@@ -252,7 +250,7 @@
       <workItem from="1611848200906" duration="293000" />
       <workItem from="1611977209715" duration="46000" />
       <workItem from="1611977297195" duration="1036000" />
-      <workItem from="1612063204042" duration="305000" />
+      <workItem from="1612063204042" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -443,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611980494428</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add new create function to payment">
+      <created>1612063751111</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612063751111</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,6 +479,7 @@
     <MESSAGE value="add delete and update function in payment" />
     <MESSAGE value="add employee Id" />
     <MESSAGE value="add employee id" />
-    <option name="LAST_COMMIT_MESSAGE" value="add employee id" />
+    <MESSAGE value="add new create function to payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new create function to payment" />
   </component>
 </project>
