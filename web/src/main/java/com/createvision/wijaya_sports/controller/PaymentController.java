@@ -36,6 +36,25 @@ public class PaymentController {
         }
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Object> createPayment(@RequestBody PaymentVO PaymentVO) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            PaymentVO paymentVO = paymentService.createPayment(PaymentVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(paymentVO);
+            return ResponseEntity.ok(returnVO);
+
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     @ResponseBody
     public ResponseEntity<Object> updatePayment(@RequestBody PaymentVO PaymentVO) throws Exception {

@@ -51,9 +51,27 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
+    public PaymentVO createPayment(PaymentVO paymentVO) throws Exception {
+        try {
+
+            Member member =memberDao.get(paymentVO.getMemberId());
+            Payment payment =new Payment();
+            payment.setAmount(paymentVO.getAmount());
+            payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+            payment.setMember(member);
+            payment.setStatus(paymentVO.getStatus());
+            paymentDao.save(payment);
+
+            return paymentVO;
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
     public PaymentVO updatePayment(PaymentVO paymentVO) throws Exception {
         try {
-            Payment payment = new Payment();
+            Payment payment = paymentDao.get(paymentVO.getMemberId());
             Member member = memberDao.get(paymentVO.getMemberId());
             payment.setMember(member);
             payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
