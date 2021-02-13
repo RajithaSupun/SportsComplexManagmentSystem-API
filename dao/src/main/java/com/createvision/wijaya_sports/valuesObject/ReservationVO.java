@@ -3,12 +3,16 @@ package com.createvision.wijaya_sports.valuesObject;
 import java.util.Date;
 
 public class ReservationVO {
+    private Long reservationId;
     private String firstName;
     private String lastName;
     private String date;
     private String contactNumber;
     private String time;
     private String sport;
+
+    public Long getReservationId() {return reservationId;}
+    public void setReservationId(Long reservationId) {this.reservationId = reservationId;}
 
     public String getFirstName() {return firstName;}
     public void setFirstName(String firstName) {this.firstName = firstName;}

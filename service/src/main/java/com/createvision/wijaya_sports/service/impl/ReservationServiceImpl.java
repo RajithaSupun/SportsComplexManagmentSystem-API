@@ -25,11 +25,11 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public List<ReservationVO> getAllReservation() throws Exception {
         try {
-            List<ReservationVO> reservationVOList =new ArrayList<>();
-            List<Reservation> reservations =reservationDao.getAll();
+            List<ReservationVO> reservationVOList = new ArrayList<>();
+            List<Reservation> reservations = reservationDao.getAll();
 
-            for (Reservation res: reservations) {
-                ReservationVO reservationVO =new ReservationVO();
+            for (Reservation res : reservations) {
+                ReservationVO reservationVO = new ReservationVO();
                 reservationVO.setFirstName(res.getFirstName());
                 reservationVO.setLastName(res.getLastName());
                 reservationVO.setDate(commonFunction.convertDateToString(res.getDate()));
@@ -37,7 +37,7 @@ public class ReservationServiceImpl implements ReservationService {
                 reservationVOList.add(reservationVO);
             }
             return reservationVOList;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
@@ -45,10 +45,52 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     public ReservationVO createReservation(ReservationVO reservationVO) throws Exception {
         try {
+            Reservation reservation = new Reservation();
+
+            reservation.setFirstName(reservationVO.getFirstName());
+            reservation.setLastName(reservationVO.getLastName());
+            reservation.setDate(commonFunction.getDateTimeByDateString(reservationVO.getDate()));
+            reservation.setTime(reservationVO.getTime());
+            reservation.setContactNumber(reservationVO.getContactNumber());
+            reservationDao.save(reservation);
 
             return reservationVO;
-        }catch (Exception e){
+
+        } catch (Exception e) {
             throw e;
+        }
+    }
+
+
+    @Override
+    public ReservationVO updateReservation(ReservationVO reservationVO) throws Exception {
+
+        try {
+            Reservation reservation = reservationDao.get(reservationVO.getReservationId());
+            reservation.setSport(reservationVO.getSport());
+            reservation.setDate(commonFunction.getDateTimeByDateString(reservationVO.getDate()));
+            reservation.setFirstName(reservationVO.getFirstName());
+            reservation.setLastName(reservationVO.getLastName());
+            reservation.setTime(reservationVO.getTime());
+            reservation.setContactNumber(reservationVO.getContactNumber());
+            reservationDao.save(reservation);
+            return reservationVO;
+
+        } catch (Exception e) {
+            throw e;
+        }
+
+    }
+
+    @Override
+    public void deleteReservation(Long reservationId) throws Exception {
+
+        try {
+            Reservation reservation =reservationDao.get(reservationId);
+            reservationDao.delete(reservation);
+
+        } catch (Exception e) {
+
         }
     }
 }
