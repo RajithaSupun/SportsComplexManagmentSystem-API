@@ -19,9 +19,6 @@
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
@@ -254,7 +251,7 @@
       <workItem from="1611977209715" duration="46000" />
       <workItem from="1611977297195" duration="1036000" />
       <workItem from="1612063204042" duration="3280000" />
-      <workItem from="1613195194009" duration="566000" />
+      <workItem from="1613195194009" duration="2978000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -459,14 +456,20 @@
       <option name="project" value="LOCAL" />
       <updated>1612075356741</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add employee delete function;">
+      <created>1613196130709</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613196130709</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add funtion to create invoice" />
     <MESSAGE value="add invoice itmes to data base" />
     <MESSAGE value="add new values object" />
     <MESSAGE value="add new values object and remove unwanted values object" />
@@ -491,6 +494,7 @@
     <MESSAGE value="add employee Id" />
     <MESSAGE value="add employee id" />
     <MESSAGE value="add new create function to payment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new create function to payment" />
+    <MESSAGE value="Add employee delete function;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add employee delete function;" />
   </component>
 </project>

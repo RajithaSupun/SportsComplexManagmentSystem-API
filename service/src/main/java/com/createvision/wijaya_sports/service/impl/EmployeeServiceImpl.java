@@ -68,7 +68,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
                 employeeVOList.add(employeeVO);
 
-
             }
             return employeeVOList;
         } catch (Exception e) {
@@ -81,6 +80,24 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
             Employee employee = employeeDao.get(employeeId);
             employeeDao.delete(employee);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
+    public EmployeeVO updateEmployee(EmployeeVO employeeVO) throws Exception {
+        try {
+            Employee employee = employeeDao.get(employeeVO.getId());
+            employee.setAddress(employeeVO.getAddress());
+            employee.setGender(genderDao.get(employeeVO.getGenderId()));
+            employee.setFirstName(employeeVO.getFirstName());
+            employee.setLastName(employeeVO.getLastName());
+            employee.setDateOfBirth(commonFunction.getCurrentDateAndTimeByTimeZone(employeeVO.getDateOfBirth()));
+            employee.setNic(employeeVO.getNic());
+            employee.setLandphone_Number(employeeVO.getMobileNumber());
+            employeeDao.save(employee);
+            return employeeVO;
         } catch (Exception e) {
             throw e;
         }

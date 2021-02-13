@@ -2,6 +2,7 @@ package com.createvision.wijaya_sports.controller;
 
 import com.createvision.wijaya_sports.service.EmployeeService;
 import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
+import com.createvision.wijaya_sports.valuesObject.PaymentVO;
 import com.createvision.wijaya_sports.valuesObject.ReturnVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -63,6 +64,26 @@ public class EmployeeController {
             returnVO.setStatusCode(200);
             returnVO.setSuccess(true);
             return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+
+
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @ResponseBody
+    public ResponseEntity<Object> updatePayment(@RequestBody EmployeeVO employeeVO) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            EmployeeVO employee = employeeService.updateEmployee(employeeVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(employee);
+            return ResponseEntity.ok(returnVO);
+
         } catch (Exception e) {
             returnVO.setResult(e);
             returnVO.setStatusCode(5001);
