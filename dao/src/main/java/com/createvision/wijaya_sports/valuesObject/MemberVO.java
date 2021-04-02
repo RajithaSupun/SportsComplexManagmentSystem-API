@@ -12,6 +12,7 @@ public class MemberVO {
     private  int sportsId;
     private String mobileNumber;
     private  String landPhoneNumber;
+    private String sportName;
 
     public Long getMemberId() {return memberId;}
     public void setMemberId(Long memberId) {this.memberId = memberId;}
@@ -45,4 +46,7 @@ public class MemberVO {
 
     public String getLandPhoneNumber() {return landPhoneNumber;}
     public void setLandPhoneNumber(String landPhoneNumber) {this.landPhoneNumber = landPhoneNumber;}
+
+    public String getSportName() {return sportName;}
+    public void setSportName(String sportName) {this.sportName = sportName;}
 }

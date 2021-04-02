@@ -7,12 +7,16 @@ import com.createvision.wijaya_sports.model.Gender;
 import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.model.Sports;
 import com.createvision.wijaya_sports.service.MemberService;
+import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
 import com.createvision.wijaya_sports.valuesObject.MemberVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.security.PublicKey;
+import java.util.ArrayList;
+import java.util.List;
+
 @Service("memberService")
 @Transactional
 
@@ -85,5 +89,33 @@ public class MemberServiceImpl implements MemberService {
             throw e;
         }
 
+    }
+
+    @Override
+    public List<MemberVO> getAllMember() throws Exception {
+        List<MemberVO> memberVOList = new ArrayList<>();
+        try {
+            List<Member> memberList = memberDao.getAll();
+            for (Member member : memberList) {
+                MemberVO memberVO = new MemberVO();
+
+                memberVO.setMemberId(member.getId());
+                memberVO.setFirstName(member.getFirstName());
+                memberVO.setLastName(member.getLastName());
+                memberVO.setAddress(member.getAddress());
+                memberVO.setDateOfBirth(commonFunction.convertDateToString(member.getDateOfBirth()));
+                memberVO.setNic(member.getNic());
+                memberVO.setJoinedDate(commonFunction.convertDateToString(member.getJoinDate()));
+                memberVO.setMobileNumber(member.getMobileNumber());
+                memberVO.setSportName(member.getSports().name());
+                Gender gender = genderDao.get(member.getGender().getId());
+                memberVO.setGenderId(gender.getId());
+                memberVOList.add(memberVO);
+
+            }
+            return memberVOList;
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }
