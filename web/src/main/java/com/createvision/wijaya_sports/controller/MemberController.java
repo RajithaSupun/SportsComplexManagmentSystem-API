@@ -1,6 +1,8 @@
 package com.createvision.wijaya_sports.controller;
 
+import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.service.MemberService;
+import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
 import com.createvision.wijaya_sports.valuesObject.MemberVO;
 import com.createvision.wijaya_sports.valuesObject.ReturnVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +33,41 @@ public class MemberController {
             return ResponseEntity.ok(returnVO);
         }
 
+    }
+
+    @RequestMapping(value = "/{memberId}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public ResponseEntity<Object> deletePayment(@PathVariable("memberId") Long memberId) throws Exception {
+
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            memberService.deleteMember(memberId);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @ResponseBody
+    public ResponseEntity<Object> upMember(@RequestBody MemberVO memberVO) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            MemberVO memberVO1 = memberService.updateMember(memberVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(memberService);
+            return ResponseEntity.ok(returnVO);
+
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
     }
 }

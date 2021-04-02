@@ -2,6 +2,7 @@ package com.createvision.wijaya_sports.service.impl;
 
 import com.createvision.wijaya_sports.dao.GenderDao;
 import com.createvision.wijaya_sports.dao.MemberDao;
+import com.createvision.wijaya_sports.model.Employee;
 import com.createvision.wijaya_sports.model.Gender;
 import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.model.Sports;
@@ -53,5 +54,36 @@ public class MemberServiceImpl implements MemberService {
             throw e;
         }
         return memberVO;
+    }
+
+    @Override
+    public void deleteMember(Long memberId) throws Exception {
+        try {
+            Member member = memberDao.get(memberId);
+            memberDao.delete(member);
+
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
+    public MemberVO updateMember(MemberVO memberVO) throws Exception {
+
+        try {
+            Member member = memberDao.get(memberVO.getMemberId());
+            member.setAddress(memberVO.getAddress());
+            member.setGender(genderDao.get(memberVO.getGenderId()));
+            member.setFirstName(memberVO.getFirstName());
+            member.setLastName(memberVO.getLastName());
+            member.setDateOfBirth(commonFunction.getCurrentDateAndTimeByTimeZone(memberVO.getDateOfBirth()));
+            member.setNic(memberVO.getNic());
+            member.setMobileNumber(memberVO.getMobileNumber());
+            memberDao.save(member);
+            return memberVO;
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
 }

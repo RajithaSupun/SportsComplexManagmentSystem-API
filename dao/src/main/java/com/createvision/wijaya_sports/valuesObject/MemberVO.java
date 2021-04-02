@@ -1,6 +1,7 @@
 package com.createvision.wijaya_sports.valuesObject;
 
 public class MemberVO {
+    private Long memberId;
     private String firstName;
     private  String lastName;
     private  String address;
@@ -11,6 +12,9 @@ public class MemberVO {
     private  int sportsId;
     private String mobileNumber;
     private  String landPhoneNumber;
+
+    public Long getMemberId() {return memberId;}
+    public void setMemberId(Long memberId) {this.memberId = memberId;}
 
     public String getFirstName() {return firstName;}
     public void setFirstName(String firstName) {this.firstName = firstName;}
