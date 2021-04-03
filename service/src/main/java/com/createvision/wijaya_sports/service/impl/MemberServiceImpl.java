@@ -1,14 +1,15 @@
 package com.createvision.wijaya_sports.service.impl;
 
 import com.createvision.wijaya_sports.dao.GenderDao;
+import com.createvision.wijaya_sports.dao.MeasurementDao;
 import com.createvision.wijaya_sports.dao.MemberDao;
-import com.createvision.wijaya_sports.model.Employee;
-import com.createvision.wijaya_sports.model.Gender;
-import com.createvision.wijaya_sports.model.Member;
-import com.createvision.wijaya_sports.model.Sports;
+import com.createvision.wijaya_sports.dao.RegistrationFreeDao;
+import com.createvision.wijaya_sports.model.*;
 import com.createvision.wijaya_sports.service.MemberService;
 import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
+import com.createvision.wijaya_sports.valuesObject.MeasurementVO;
 import com.createvision.wijaya_sports.valuesObject.MemberVO;
+import com.createvision.wijaya_sports.valuesObject.RegistrationFeeVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,12 @@ public class MemberServiceImpl implements MemberService {
     @Autowired
     GenderDao genderDao;
 
+    @Autowired
+    MeasurementDao measurementDao;
+
+    @Autowired
+    RegistrationFreeDao registrationFreeDao;
+
     @Override
     public MemberVO createNewMember(MemberVO memberVO) throws Exception {
         try {
@@ -43,14 +50,44 @@ public class MemberServiceImpl implements MemberService {
             member.setGender(gender);
             member.setJoinDate(commonFunction.getDateTimeByDateString(memberVO.getJoinedDate()));
             member.setSports(Sports.GYM);
-//            if (memberVO.getSportsId() == 1) {
-//                member.setSports(Sports.BADMINTON);
-//            }
-//            else if (memberVO.getSportsId() == 2){
-//                member.setSports(Sports.SWIMMING);
-//            }
-//            else {member.setSports(Sports.GYM);
-//            }
+            Measurement saveMeasurement =new Measurement();
+            for (MeasurementVO measurementVO:memberVO.getMeasurement()) {
+                Measurement measurement =new Measurement();
+                measurement.setAbdomen(Double.toString(measurementVO.getAbdomen())!=null?Double.toString(measurementVO.getAbdomen()):"");
+                measurement.setChest(Double.toString(measurementVO.getChest())!=null?Double.toString(measurementVO.getChest()):"");
+                measurement.setHips(Double.toString(measurementVO.getHips())!=null?Double.toString(measurementVO.getHips()):"");
+                measurement.setLeftCalf(Double.toString(measurementVO.getLeft_calf())!=null?Double.toString(measurementVO.getLeft_calf()):"");
+                measurement.setRightCalf(Double.toString(measurementVO.getRight_calf())!=null?Double.toString(measurementVO.getRight_calf()):"");
+                measurement.setLeftThigh(Double.toString(measurementVO.getLeft_thigh())!=null?Double.toString(measurementVO.getLeft_thigh()):"");
+                measurement.setWrist(Double.toString(measurementVO.getWrist())!=null?Double.toString(measurementVO.getWrist()):"");
+                Long saveId = measurementDao.save(measurement);
+                saveMeasurement =measurementDao.get(saveId);
+
+            }
+            member.setMeasurement(saveMeasurement);
+            RegistrationFee saveRegistrationFee =new RegistrationFee();
+            for (RegistrationFeeVO rgis :memberVO.getRegistrationFee()) {
+                RegistrationFee registrationFee =new RegistrationFee();
+                registrationFee.setAmount(rgis.getAmount());
+                registrationFee.setDescription(rgis.getDescription());
+              //  registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
+                Long saveId = registrationFreeDao.save(registrationFee);
+                saveRegistrationFee = registrationFreeDao.get(saveId);
+            }
+
+            member.setRegistrationFee(saveRegistrationFee);
+
+
+
+            if (memberVO.getSportId() == 1) {
+                member.setSports(Sports.BADMINTON);
+            }
+            else if (memberVO.getSportId() == 2){
+                member.setSports(Sports.SWIMMING);
+            }
+            else {member.setSports(Sports.GYM);
+            }
+            System.out.println("Come to this");
             memberDao.save(member);
 
         }catch (Exception e)

@@ -50,7 +50,7 @@ public class Member extends BaseObject implements Serializable {
 
     @Basic
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_member_id")
+    @JoinColumn(name = "fk_measurement_id")
     private Measurement measurement;
 
     @Basic

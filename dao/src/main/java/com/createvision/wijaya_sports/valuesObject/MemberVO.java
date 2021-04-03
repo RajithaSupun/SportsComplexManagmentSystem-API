@@ -1,5 +1,7 @@
 package com.createvision.wijaya_sports.valuesObject;
 
+import java.util.List;
+
 public class MemberVO {
     private Long memberId;
     private String firstName;
@@ -9,10 +11,15 @@ public class MemberVO {
     private String dateOfBirth;
     private Long genderId;
     private String joinedDate;
-    private  int sportsId;
+    private int sportId;
     private String mobileNumber;
     private  String landPhoneNumber;
     private String sportName;
+    private List<MeasurementVO> measurement;
+    private List<RegistrationFeeVO> registrationFee;
+//    private List<SportVO> sportsId1;
+
+
 
     public Long getMemberId() {return memberId;}
     public void setMemberId(Long memberId) {this.memberId = memberId;}
@@ -38,8 +45,8 @@ public class MemberVO {
     public String getJoinedDate() {return joinedDate;}
     public void setJoinedDate(String joinedDate) {this.joinedDate = joinedDate;}
 
-    public int getSportsId() {return sportsId;}
-    public void setSportsId(int sportsId) {this.sportsId = sportsId;}
+    public int getSportId() {return sportId;}
+    public void setSportId(int sportId) {this.sportId = sportId;}
 
     public String getMobileNumber() {return mobileNumber;}
     public void setMobileNumber(String mobileNumber) {this.mobileNumber = mobileNumber;}
@@ -49,4 +56,13 @@ public class MemberVO {
 
     public String getSportName() {return sportName;}
     public void setSportName(String sportName) {this.sportName = sportName;}
+
+    public List<MeasurementVO> getMeasurement() {return measurement;}
+    public void setMeasurement(List<MeasurementVO> measurement) {this.measurement = measurement;}
+
+    public List<RegistrationFeeVO> getRegistrationFee() {return registrationFee;}
+    public void setRegistrationFee(List<RegistrationFeeVO> registrationFee) {this.registrationFee = registrationFee;}
+
+//    public List<SportVO> getSportsId1() {return sportsId1;}
+//    public void setSportsId1(List<SportVO> sportsId1) {this.sportsId1 = sportsId1;}
 }

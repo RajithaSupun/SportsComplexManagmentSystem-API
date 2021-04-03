@@ -20,7 +20,7 @@ public class MemberController {
     MemberService memberService;
     @RequestMapping(value = "/", method = RequestMethod.POST)
     @ResponseBody
-    public ResponseEntity<Object> createEmployee(@RequestBody MemberVO memberVO) throws Exception {
+    public ResponseEntity<Object> createMember(@RequestBody MemberVO memberVO) throws Exception {
         ReturnVO returnVO = new ReturnVO();
         try {
             MemberVO insertedMember = memberService.createNewMember(memberVO);
