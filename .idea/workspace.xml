@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="Add Reservation Update and delete function function;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/MemberVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/dao/InvoiceDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/dao/InvoiceItemDetailDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/dao/ItemDao.class" beforeDir="false" />
@@ -26,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/ItemVO.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/InvoiceItemDetailService.class" beforeDir="false" />
@@ -39,7 +37,6 @@
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/ItemServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/InvoiceController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/ItemController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
@@ -284,7 +281,7 @@
       <workItem from="1617504154944" duration="2050000" />
       <workItem from="1617522503008" duration="415000" />
       <workItem from="1617552230078" duration="1220000" />
-      <workItem from="1618048509088" duration="4923000" />
+      <workItem from="1618048509088" duration="6472000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -531,14 +528,20 @@
       <option name="project" value="LOCAL" />
       <updated>1617431766782</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add new function to get all member details">
+      <created>1618061343646</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1618061343646</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new values object to send result to UI" />
     <MESSAGE value="add git file" />
     <MESSAGE value="add return values object to get invoice function" />
     <MESSAGE value="change file name" />
@@ -563,6 +566,7 @@
     <MESSAGE value="add memner Delete and update" />
     <MESSAGE value="add get all function in member" />
     <MESSAGE value="modifyed member create function" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifyed member create function" />
+    <MESSAGE value="add new function to get all member details" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new function to get all member details" />
   </component>
 </project>
