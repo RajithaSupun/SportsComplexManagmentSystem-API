@@ -135,7 +135,6 @@ public class MemberServiceImpl implements MemberService {
             List<Member> memberList = memberDao.getAll();
             for (Member member : memberList) {
                 MemberVO memberVO = new MemberVO();
-
                 memberVO.setMemberId(member.getId());
                 memberVO.setFirstName(member.getFirstName());
                 memberVO.setLastName(member.getLastName());
@@ -154,5 +153,61 @@ public class MemberServiceImpl implements MemberService {
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    @Override
+    public List<MemberVO> getAllMemberDetails() throws Exception {
+        List<MemberVO>memberVOList =new ArrayList<>();
+
+        try {
+            List<Member> memberList = memberDao.getAll();
+            for (Member member : memberList) {
+                MemberVO memberVO = new MemberVO();
+                memberVO.setMemberId(member.getId());
+                memberVO.setFirstName(member.getFirstName());
+                memberVO.setLastName(member.getLastName());
+                memberVO.setAddress(member.getAddress());
+                memberVO.setDateOfBirth(commonFunction.convertDateToString(member.getDateOfBirth()));
+                memberVO.setNic(member.getNic());
+                memberVO.setJoinedDate(commonFunction.convertDateToString(member.getJoinDate()));
+                memberVO.setMobileNumber(member.getMobileNumber());
+                memberVO.setSportName(member.getSports().name());
+                Gender gender = genderDao.get(member.getGender().getId());
+
+
+
+                List<MeasurementVO> measurementVOList =new ArrayList<>();
+                //   measurementVO.setRight_arm(Double.parseDouble(member.getMeasurement().getRightArm()));
+                MeasurementVO measurementVO =new MeasurementVO();
+                measurementVO.setAbdomen(Double.parseDouble(member.getMeasurement().getAbdomen()));
+                measurementVO.setChest(Double.parseDouble(member.getMeasurement().getChest()));
+                measurementVO.setHips(Double.parseDouble(member.getMeasurement().getHips()));
+                measurementVO.setLeft_calf(Double.parseDouble(member.getMeasurement().getLeftCalf()));
+                measurementVO.setLeft_thigh(Double.parseDouble(member.getMeasurement().getLeftThigh()));
+                measurementVO.setRight_calf(Double.parseDouble(member.getMeasurement().getRightCalf()));
+                measurementVO.setWrist(Double.parseDouble(member.getMeasurement().getWrist()));
+                measurementVOList.add(measurementVO);
+                memberVO.setMeasurement(measurementVOList);
+
+                List<RegistrationFeeVO> registrationFeeVOList =new ArrayList<>();
+                RegistrationFeeVO registrationFeeVO =new RegistrationFeeVO();
+                registrationFeeVO.setAmount(member.getRegistrationFee().getAmount());
+                registrationFeeVO.setDescription(member.getRegistrationFee().getDescription());
+                registrationFeeVOList.add(registrationFeeVO);
+                memberVO.setRegistrationFee(registrationFeeVOList);
+
+
+
+                memberVO.setGenderId(gender.getId());
+                memberVOList.add(memberVO);
+
+            }
+
+            return memberVOList;
+        }catch (Exception e){
+
+            throw e;
+        }
+
     }
 }

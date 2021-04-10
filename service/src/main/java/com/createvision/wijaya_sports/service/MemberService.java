@@ -9,6 +9,7 @@ public interface MemberService {
     public void deleteMember(Long memberId) throws Exception;
     public MemberVO updateMember(MemberVO memberVO)throws Exception;
     public List<MemberVO> getAllMember() throws Exception;
+    public List<MemberVO> getAllMemberDetails() throws Exception;
 
 
 

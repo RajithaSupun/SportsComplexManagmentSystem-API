@@ -17,7 +17,7 @@ public class MemberVO {
     private String sportName;
     private List<MeasurementVO> measurement;
     private List<RegistrationFeeVO> registrationFee;
-//    private List<SportVO> sportsId1;
+    private List<SportVO> sportsId1;
 
 
 

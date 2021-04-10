@@ -92,5 +92,24 @@ public class MemberController {
 
     }
 
+    @RequestMapping(value = "/AllMemberDetails/",method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Object> getAllMemberDetails() throws Exception{
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            List<MemberVO> memberList = memberService.getAllMemberDetails();
+            returnVO.setResult(memberList);
+            returnVO.setSuccess(true);
+            returnVO.setStatusCode(200);
+            return ResponseEntity.ok(returnVO);
+
+        }catch (Exception e){
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+
 
 }
