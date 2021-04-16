@@ -178,13 +178,13 @@ public class MemberServiceImpl implements MemberService {
                 if (member.getMeasurement() != null) {
                     List<MeasurementVO> measurementVOList = new ArrayList<>();
                     MeasurementVO measurementVO = new MeasurementVO();
-                    measurementVO.setAbdomen(Double.parseDouble(member.getMeasurement().getAbdomen()!=null?member.getMeasurement().getAbdomen():"0.00"));
-                    measurementVO.setChest(Double.parseDouble(member.getMeasurement().getChest()!=null?member.getMeasurement().getChest():"0.00"));
-                    measurementVO.setHips(Double.parseDouble(member.getMeasurement().getHips()!=null?member.getMeasurement().getHips():"0.00"));
-                    measurementVO.setLeft_calf(Double.parseDouble(member.getMeasurement().getLeftCalf()!=null?member.getMeasurement().getLeftCalf():"0.00"));
-                    measurementVO.setLeft_thigh(Double.parseDouble(member.getMeasurement().getLeftThigh()!=null?member.getMeasurement().getLeftThigh():"0.00"));
-                    measurementVO.setRight_calf(Double.parseDouble(member.getMeasurement().getRightCalf()!=null?member.getMeasurement().getRightCalf():"0.00"));
-                    measurementVO.setWrist(Double.parseDouble(member.getMeasurement().getWrist()!=null?member.getMeasurement().getWrist():"0.00"));
+                    measurementVO.setAbdomen(Double.parseDouble(member.getMeasurement().getAbdomen() != null ? member.getMeasurement().getAbdomen() : "0.00"));
+                    measurementVO.setChest(Double.parseDouble(member.getMeasurement().getChest() != null ? member.getMeasurement().getChest() : "0.00"));
+                    measurementVO.setHips(Double.parseDouble(member.getMeasurement().getHips() != null ? member.getMeasurement().getHips() : "0.00"));
+                    measurementVO.setLeft_calf(Double.parseDouble(member.getMeasurement().getLeftCalf() != null ? member.getMeasurement().getLeftCalf() : "0.00"));
+                    measurementVO.setLeft_thigh(Double.parseDouble(member.getMeasurement().getLeftThigh() != null ? member.getMeasurement().getLeftThigh() : "0.00"));
+                    measurementVO.setRight_calf(Double.parseDouble(member.getMeasurement().getRightCalf() != null ? member.getMeasurement().getRightCalf() : "0.00"));
+                    measurementVO.setWrist(Double.parseDouble(member.getMeasurement().getWrist() != null ? member.getMeasurement().getWrist() : "0.00"));
                     measurementVOList.add(measurementVO);
                     memberVO.setMeasurement(measurementVOList);
                 }
@@ -192,8 +192,8 @@ public class MemberServiceImpl implements MemberService {
                 if (member.getRegistrationFee() != null) {
                     List<RegistrationFeeVO> registrationFeeVOList = new ArrayList<>();
                     RegistrationFeeVO registrationFeeVO = new RegistrationFeeVO();
-                    registrationFeeVO.setAmount(Double.toString(member.getRegistrationFee().getAmount())!=null?member.getRegistrationFee().getAmount():0.00);
-                    registrationFeeVO.setDescription(member.getRegistrationFee().getDescription()!=null?member.getRegistrationFee().getDescription():"");
+                    registrationFeeVO.setAmount(Double.toString(member.getRegistrationFee().getAmount()) != null ? member.getRegistrationFee().getAmount() : 0.00);
+                    registrationFeeVO.setDescription(member.getRegistrationFee().getDescription() != null ? member.getRegistrationFee().getDescription() : "");
                     registrationFeeVOList.add(registrationFeeVO);
                     memberVO.setRegistrationFee(registrationFeeVOList);
                 }
@@ -210,5 +210,48 @@ public class MemberServiceImpl implements MemberService {
             throw e;
         }
 
+    }
+
+    @Override
+    public MemberVO getMemberById(Long memberId) throws Exception {
+        try {
+            Member member = memberDao.get(memberId);
+            MemberVO memberVO = new MemberVO();
+            List<MeasurementVO> measurementVOList = new ArrayList<>();
+            if (member != null) {
+                MeasurementVO measurementVO = new MeasurementVO();
+                memberVO.setMemberId(member.getId());
+                memberVO.setFirstName(member.getFirstName());
+                memberVO.setLastName(member.getLastName());
+                memberVO.setAddress(member.getAddress());
+                memberVO.setDateOfBirth(commonFunction.convertDateToString(member.getDateOfBirth()));
+                memberVO.setNic(member.getNic());
+                memberVO.setJoinedDate(commonFunction.convertDateToString(member.getJoinDate()));
+                memberVO.setMobileNumber(member.getMobileNumber());
+                memberVO.setSportName(member.getSports().name());
+                Gender gender = genderDao.get(member.getGender().getId());
+                memberVO.setGenderId(gender.getId());
+
+                measurementVO.setWrist(Double.parseDouble(member.getMeasurement().getWrist() != null ? member.getMeasurement().getWrist() : "0"));
+                measurementVO.setHips(Double.parseDouble(member.getMeasurement().getHips() != null ? member.getMeasurement().getHips() : "0"));
+                measurementVO.setRight_calf(Double.parseDouble(member.getMeasurement().getRightCalf() != null ? member.getMeasurement().getRightCalf() : "0"));
+                measurementVO.setLeft_calf(Double.parseDouble(member.getMeasurement().getLeftCalf() != null ? member.getMeasurement().getLeftCalf() : "0"));
+                measurementVO.setAbdomen(Double.parseDouble(member.getMeasurement().getAbdomen() != null ? member.getMeasurement().getAbdomen() : "0"));
+                measurementVO.setLeft_arm(Double.parseDouble(member.getMeasurement().getLestArm() != null ? member.getMeasurement().getLestArm() : "0"));
+                measurementVO.setRight_arm(Double.parseDouble(member.getMeasurement().getRightArm() != null ? member.getMeasurement().getRightArm() : "0"));
+                measurementVO.setLeft_thigh(Double.parseDouble(member.getMeasurement().getLeftThigh() != null ? member.getMeasurement().getLeftThigh() : "0"));
+                measurementVO.setRight_thigh(Double.parseDouble(member.getMeasurement().getRightThigh() != null ? member.getMeasurement().getRightThigh() : "0"));
+
+                measurementVOList.add(measurementVO);
+                memberVO.setMeasurement(measurementVOList);
+
+
+
+            }
+            return memberVO;
+
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }

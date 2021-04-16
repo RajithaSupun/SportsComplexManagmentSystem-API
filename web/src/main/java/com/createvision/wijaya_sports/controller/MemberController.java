@@ -111,5 +111,24 @@ public class MemberController {
         }
     }
 
+    @RequestMapping(value = "/{memberId}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Object> getMemberById(@PathVariable("memberId") Long memberId) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            MemberVO member = memberService.getMemberById(memberId);
+            returnVO.setResult(member);
+            returnVO.setSuccess(true);
+            returnVO.setStatusCode(200);
+            return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+
+    }
+
 
 }

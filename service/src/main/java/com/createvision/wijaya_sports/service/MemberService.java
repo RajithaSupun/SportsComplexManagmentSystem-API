@@ -10,6 +10,7 @@ public interface MemberService {
     public MemberVO updateMember(MemberVO memberVO)throws Exception;
     public List<MemberVO> getAllMember() throws Exception;
     public List<MemberVO> getAllMemberDetails() throws Exception;
+    public MemberVO getMemberById(Long memberId) throws Exception;
 
 
 
