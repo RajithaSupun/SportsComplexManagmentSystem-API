@@ -42,11 +42,6 @@ public class User extends BaseObject implements Serializable {
     private int roleId;
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-    @Fetch(FetchMode.SELECT)
-    @JsonIgnore
-    private Set<Invoice> invoice = new HashSet<Invoice>(0);
-
 
     public String getUserName() { return userName; }
     public void setUserName(String userName) { this.userName = userName; }
@@ -66,6 +61,5 @@ public class User extends BaseObject implements Serializable {
     public int getRoleId() { return roleId; }
     public void setRoleId(int roleId) { this.roleId = roleId; }
 
-    public Set<Invoice> getInvoice() { return invoice; }
-    public void setInvoice(Set<Invoice> invoice) { this.invoice = invoice; }
+
 }

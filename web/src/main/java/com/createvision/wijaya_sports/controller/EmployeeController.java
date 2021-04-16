@@ -91,4 +91,22 @@ public class EmployeeController {
             return ResponseEntity.ok(returnVO);
         }
     }
+    @RequestMapping(value = "/{employeeId}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Object> getEmployeeById(@PathVariable("employeeId") Long employeeId) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            EmployeeVO insertedEmployee = employeeService.getEmployeeBtId(employeeId);
+            returnVO.setResult(insertedEmployee);
+            returnVO.setSuccess(true);
+            returnVO.setStatusCode(200);
+            return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+
+    }
 }

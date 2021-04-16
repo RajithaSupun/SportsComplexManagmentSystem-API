@@ -50,13 +50,19 @@ public class Employee extends BaseObject implements Serializable {
     @JsonIgnore
     private Gender gender;
 
+    @Basic
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
+    private User user;
+
+
     public Gender getGender() {return gender; }
     public void setGender(Gender gender) {this.gender = gender;}
 
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -64,7 +70,6 @@ public class Employee extends BaseObject implements Serializable {
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -72,7 +77,6 @@ public class Employee extends BaseObject implements Serializable {
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
@@ -80,7 +84,6 @@ public class Employee extends BaseObject implements Serializable {
     public Date getJoin_Date() {
         return join_Date;
     }
-
     public void setJoin_Date(Date join_Date) {
         this.join_Date = join_Date;
     }
@@ -88,7 +91,6 @@ public class Employee extends BaseObject implements Serializable {
     public String getMobile_Number() {
         return mobile_Number;
     }
-
     public void setMobile_Number(String mobile_Number) {
         this.mobile_Number = mobile_Number;
     }
@@ -96,7 +98,6 @@ public class Employee extends BaseObject implements Serializable {
     public String getLandphone_Number() {
         return landphone_Number;
     }
-
     public void setLandphone_Number(String landphone_Number) {
         this.landphone_Number = landphone_Number;
     }
@@ -104,7 +105,6 @@ public class Employee extends BaseObject implements Serializable {
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
-
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
@@ -112,11 +112,11 @@ public class Employee extends BaseObject implements Serializable {
     public String getNic() {
         return nic;
     }
-
     public void setNic(String nic) {
         this.nic = nic;
     }
 
-
+    public User getUser() {return user;}
+    public void setUser(User user) {this.user = user;}
 }
 
