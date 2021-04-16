@@ -13,6 +13,9 @@ public class EmployeeVO {
     private String designation;
     private String mobileNumber;
     private  String landPhoneNumber;
+    private String userName;
+    private String password;
+
 
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}
@@ -48,6 +51,12 @@ public class EmployeeVO {
     public void setMobileNumber(String mobileNumber) {this.mobileNumber = mobileNumber; }
 
     public String getLandPhoneNumber() {return landPhoneNumber;}
-    public void setLandPhoneNumber(String landPhoneNumber) {this.landPhoneNumber = landPhoneNumber;
-    }
+    public void setLandPhoneNumber(String landPhoneNumber) {this.landPhoneNumber = landPhoneNumber;}
+
+
+    public String getUserName() {return userName;}
+    public void setUserName(String userName) {this.userName = userName;}
+
+    public String getPassword() {return password;}
+    public void setPassword(String password) {this.password = password;}
 }

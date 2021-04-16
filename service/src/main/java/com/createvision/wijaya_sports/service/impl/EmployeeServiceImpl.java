@@ -2,9 +2,11 @@ package com.createvision.wijaya_sports.service.impl;
 
 import com.createvision.wijaya_sports.dao.EmployeeDao;
 import com.createvision.wijaya_sports.dao.GenderDao;
+import com.createvision.wijaya_sports.dao.UserDao;
 import com.createvision.wijaya_sports.model.Employee;
 import com.createvision.wijaya_sports.model.Gender;
 import com.createvision.wijaya_sports.model.Payment;
+import com.createvision.wijaya_sports.model.User;
 import com.createvision.wijaya_sports.service.EmployeeService;
 import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +25,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     CommonFunctionImpl commonFunction;
     @Autowired
     GenderDao genderDao;
+    @Autowired
+    UserDao userDao;
 
     @Override
     public EmployeeVO createEmployee(EmployeeVO employeeVO) throws Exception {
         try {
             Employee employee = new Employee();
+            User user =new User();
             Gender gender = genderDao.get(employeeVO.getGenderId());
             employee.setFirstName(employeeVO.getFirstName());
             employee.setLastName(employeeVO.getLastName());
@@ -39,6 +44,10 @@ public class EmployeeServiceImpl implements EmployeeService {
             employee.setLandphone_Number(employeeVO.getLandPhoneNumber());
             employee.setGender(gender);
             employeeDao.save(employee);
+            user.setUserName(employeeVO.getUserName());
+            user.setPassword(employeeVO.getPassword());
+            userDao.save(user);
+
             return employeeVO;
 
         } catch (Exception e) {
