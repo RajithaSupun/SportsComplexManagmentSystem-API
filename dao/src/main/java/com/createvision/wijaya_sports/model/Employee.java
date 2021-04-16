@@ -45,6 +45,11 @@ public class Employee extends BaseObject implements Serializable {
     private String landphone_Number;
 
     @Basic
+    @Column(name = "designation")
+    private String designation;
+
+
+    @Basic
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "gender_id")
     @JsonIgnore
@@ -118,5 +123,8 @@ public class Employee extends BaseObject implements Serializable {
 
     public User getUser() {return user;}
     public void setUser(User user) {this.user = user;}
+
+    public String getDesignation() {return designation;}
+    public void setDesignation(String designation) {this.designation = designation;}
 }
 

@@ -32,7 +32,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeVO createEmployee(EmployeeVO employeeVO) throws Exception {
         try {
             Employee employee = new Employee();
-            User user =new User();
+            User user = new User();
             Gender gender = genderDao.get(employeeVO.getGenderId());
             employee.setFirstName(employeeVO.getFirstName());
             employee.setLastName(employeeVO.getLastName());
@@ -74,8 +74,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeVO.setLandPhoneNumber(employee.getLandphone_Number());
                 Gender gender = genderDao.get(employee.getGender().getId());
                 employeeVO.setGenderName(gender.getGenderName());
-                employeeVO.setUserName(employee.getUser().getUserName()!=null?employee.getUser().getUserName():"");
-                employeeVO.setPassword(employee.getUser().getPassword()!=null?employee.getUser().getPassword():"");
+                employeeVO.setUserName(employee.getUser().getUserName() != null ? employee.getUser().getUserName() : "");
+                employeeVO.setPassword(employee.getUser().getPassword() != null ? employee.getUser().getPassword() : "");
+                employeeVO.setDesignation(employee.getDesignation() != null ? employee.getDesignation() : "");
 
                 employeeVOList.add(employeeVO);
 
@@ -119,7 +120,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeVO employeeVO = new EmployeeVO();
         try {
             Employee employee = employeeDao.get(employeeId);
-            if(employee!=null){
+            if (employee != null) {
                 employeeVO.setId(employee.getId());
                 employeeVO.setFirstName(employee.getFirstName());
                 employeeVO.setLastName(employee.getLastName());
@@ -131,8 +132,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeVO.setLandPhoneNumber(employee.getLandphone_Number());
                 Gender gender = genderDao.get(employee.getGender().getId());
                 employeeVO.setGenderName(gender.getGenderName());
-                employeeVO.setUserName(employee.getUser().getUserName()!=null?employee.getUser().getUserName():"");
-                employeeVO.setPassword(employee.getUser().getPassword()!=null?employee.getUser().getPassword():"");
+                employeeVO.setUserName(employee.getUser().getUserName() != null ? employee.getUser().getUserName() : "");
+                employeeVO.setPassword(employee.getUser().getPassword() != null ? employee.getUser().getPassword() : "");
             }
 
             return employeeVO;
