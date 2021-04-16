@@ -50,6 +50,7 @@ public class MemberServiceImpl implements MemberService {
             member.setGender(gender);
             member.setJoinDate(commonFunction.getDateTimeByDateString(memberVO.getJoinedDate()));
             member.setSports(Sports.GYM);
+            member.setMobileNumber(memberVO.getMobileNumber());
             Measurement saveMeasurement = new Measurement();
             for (MeasurementVO measurementVO : memberVO.getMeasurement()) {
                 Measurement measurement = new Measurement();
