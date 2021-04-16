@@ -74,6 +74,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeVO.setLandPhoneNumber(employee.getLandphone_Number());
                 Gender gender = genderDao.get(employee.getGender().getId());
                 employeeVO.setGenderName(gender.getGenderName());
+                employeeVO.setUserName(employee.getUser().getUserName()!=null?employee.getUser().getUserName():"");
+                employeeVO.setPassword(employee.getUser().getPassword()!=null?employee.getUser().getPassword():"");
 
                 employeeVOList.add(employeeVO);
 
