@@ -46,7 +46,7 @@ public class MemberController {
             memberService.deleteMember(memberId);
             returnVO.setStatusCode(200);
             returnVO.setSuccess(true);
-            return ResponseEntity.ok(returnVO);
+            return ResponseEntity.ok(memberId);
         } catch (Exception e) {
             returnVO.setResult(e);
             returnVO.setStatusCode(5001);
