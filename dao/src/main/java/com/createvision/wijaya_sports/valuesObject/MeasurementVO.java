@@ -1,6 +1,6 @@
 package com.createvision.wijaya_sports.valuesObject;
 
-public class MeasurementVO {
+public class    MeasurementVO {
     private double abdomen;
     private double chest;
     private double hips;

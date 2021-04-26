@@ -39,7 +39,7 @@ public class MemberController {
 
     @RequestMapping(value = "/{memberId}", method = RequestMethod.DELETE)
     @ResponseBody
-    public ResponseEntity<Object> deletePayment(@PathVariable("memberId") Long memberId) throws Exception {
+    public ResponseEntity<Object> deleteMember(@PathVariable("memberId") Long memberId) throws Exception {
 
         ReturnVO returnVO = new ReturnVO();
         try {

@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@RestController
 @RequestMapping("/employee")
-
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
@@ -73,9 +72,10 @@ public class EmployeeController {
     }
 
 
-    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @RequestMapping(value = "/employeeUpdate", method = RequestMethod.PUT)
     @ResponseBody
-    public ResponseEntity<Object> updatePayment(@RequestBody EmployeeVO employeeVO) throws Exception {
+    public ResponseEntity<Object> updateEmployee(@RequestBody EmployeeVO employeeVO) throws Exception {
+        System.out.println("KKKKKKKK-----TTTTTT");
         ReturnVO returnVO = new ReturnVO();
         try {
             EmployeeVO employee = employeeService.updateEmployee(employeeVO);
