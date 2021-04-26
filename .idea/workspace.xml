@@ -261,7 +261,7 @@
       <workItem from="1618541794848" duration="8024000" />
       <workItem from="1618932274848" duration="995000" />
       <workItem from="1619227431923" duration="5292000" />
-      <workItem from="1619321642599" duration="12610000" />
+      <workItem from="1619321642599" duration="13401000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -592,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619403746934</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add mobile number to member table">
+      <created>1619404493856</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1619404493856</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,14 +638,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="487" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1619333374186" />
-    <state x="153" y="0" key="CommitChangelistDialog2" timestamp="1619403737946">
+    <state x="153" y="0" key="CommitChangelistDialog2" timestamp="1619404491443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="153" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1619403737946" />
-    <state x="128" y="54" key="DiffContextDialog" timestamp="1619403694467">
+    <state x="153" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1619404491443" />
+    <state x="128" y="54" key="DiffContextDialog" timestamp="1619404489009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="128" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1619403694467" />
+    <state x="128" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1619404489009" />
     <state width="1069" height="235" key="GridCell.Tab.0.bottom" timestamp="1619403484496">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
