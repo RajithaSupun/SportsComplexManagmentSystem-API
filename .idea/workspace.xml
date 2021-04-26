@@ -11,15 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="add mobile number to member table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/MeasurementVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/valuesObject/MeasurementVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
@@ -265,7 +261,7 @@
       <workItem from="1618541794848" duration="8024000" />
       <workItem from="1618932274848" duration="995000" />
       <workItem from="1619227431923" duration="5292000" />
-      <workItem from="1619321642599" duration="11747000" />
+      <workItem from="1619321642599" duration="12610000" />
     </task>
     <task id="LOCAL-00001" summary="add funtion to create invoice">
       <created>1567325263617</created>
@@ -589,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619237988789</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="add mobile number to member table">
+      <created>1619403746934</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1619403746934</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,10 +631,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="487" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1619333374186" />
-    <state x="153" y="0" key="CommitChangelistDialog2" timestamp="1619403484048">
+    <state x="153" y="0" key="CommitChangelistDialog2" timestamp="1619403737946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="153" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1619403484048" />
+    <state x="153" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1619403737946" />
+    <state x="128" y="54" key="DiffContextDialog" timestamp="1619403694467">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="128" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1619403694467" />
     <state width="1069" height="235" key="GridCell.Tab.0.bottom" timestamp="1619403484496">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
