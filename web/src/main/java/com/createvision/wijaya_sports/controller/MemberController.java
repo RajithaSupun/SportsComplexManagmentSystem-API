@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
+
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*")
 @RequestMapping("/member")
 public class MemberController {
 @Autowired

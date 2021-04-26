@@ -11,8 +11,8 @@ import java.util.Set;
 public class Payment extends BaseObject implements Serializable {
 
     @Basic
-    @Column(name = "status")
-    private String status;
+    @Column(name = "remark")
+    private String remark;
 
     @Basic
     @Column(name = "amount")
@@ -27,8 +27,8 @@ public class Payment extends BaseObject implements Serializable {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    public String getStatus() {return status;}
-    public void setStatus(String status) {this.status = status;}
+    public String getRemark() {return remark;}
+    public void setRemark(String remark) {this.remark = remark;}
 
     public double getAmount() {return amount;}
     public void setAmount(double amount) {this.amount = amount;}

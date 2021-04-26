@@ -38,7 +38,7 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setAmount(pay.getAmount());
                 paymentVO.setDate(commonFunction.convertDateToString(pay.getDate()));
                 paymentVO.setMemberId(pay.getMember().getId());
-                paymentVO.setStatus(pay.getStatus());
+                paymentVO.setStatus(pay.getRemark());
 
                 paymentVOList.add(paymentVO);
             }
@@ -59,7 +59,7 @@ public class PaymentServiceImpl implements PaymentService {
             payment.setAmount(paymentVO.getAmount());
             payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
             payment.setMember(member);
-            payment.setStatus(paymentVO.getStatus());
+            payment.setRemark(paymentVO.getStatus());
             paymentDao.save(payment);
 
             return paymentVO;
