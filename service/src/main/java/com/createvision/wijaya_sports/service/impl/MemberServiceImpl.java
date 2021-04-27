@@ -230,6 +230,7 @@ public class MemberServiceImpl implements MemberService {
                 memberVO.setJoinedDate(commonFunction.convertDateToString(member.getJoinDate()));
                 memberVO.setMobileNumber(member.getMobileNumber());
                 memberVO.setSportName(member.getSports().name());
+                memberVO.setLandPhoneNumber(member.getLandNumber());
                 Gender gender = genderDao.get(member.getGender().getId());
                 memberVO.setGenderId(gender.getId());
 
