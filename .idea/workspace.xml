@@ -9,17 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="add mobile number to member table">
+    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="change column name as remark in payment table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +78,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.25316453" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager" selected="Maven.wijaya_sports_complex [clean,install]">
+  <component name="RunManager" selected="Tomcat Server.tomcat_server">
     <configuration name="wijaya_sports_complex [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -210,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -263,13 +263,9 @@
       <workItem from="1618932274848" duration="995000" />
       <workItem from="1619227431923" duration="5292000" />
       <workItem from="1619321642599" duration="12610000" />
-    </task>
-    <task id="LOCAL-00001" summary="add funtion to create invoice">
-      <created>1567325263617</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1567325263617</updated>
+      <workItem from="1619432126508" duration="663000" />
+      <workItem from="1619432927953" duration="1632000" />
+      <workItem from="1619538505855" duration="3520000" />
     </task>
     <task id="LOCAL-00002" summary="add invoice itmes to data base">
       <created>1567353017230</created>
@@ -593,16 +589,34 @@
       <option name="project" value="LOCAL" />
       <updated>1619403746934</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="change column name as remark in payment table">
+      <created>1619409741798</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1619409741798</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add land number">
+      <created>1619540763754</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1619540763754</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add land phone number to member table.">
+      <created>1619540990569</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1619540990571</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new file for employees add" />
-    <MESSAGE value="add member function" />
-    <MESSAGE value="commit un commit file" />
     <MESSAGE value="add two table" />
     <MESSAGE value="added two new API function of reservation and payment." />
     <MESSAGE value="add payment controller and reservation controller" />
@@ -625,7 +639,10 @@
     <MESSAGE value="add add designation when create new employee" />
     <MESSAGE value="get member details by id" />
     <MESSAGE value="add mobile number to member table" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mobile number to member table" />
+    <MESSAGE value="change column name as remark in payment table" />
+    <MESSAGE value="add land number" />
+    <MESSAGE value="add land phone number to member table." />
+    <option name="LAST_COMMIT_MESSAGE" value="add land phone number to member table." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

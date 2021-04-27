@@ -63,7 +63,7 @@ public class MemberController {
             MemberVO memberVO1 = memberService.updateMember(memberVO);
             returnVO.setStatusCode(200);
             returnVO.setSuccess(true);
-            returnVO.setResult(memberService);
+            returnVO.setResult(memberVO1);
             return ResponseEntity.ok(returnVO);
 
         } catch (Exception e) {

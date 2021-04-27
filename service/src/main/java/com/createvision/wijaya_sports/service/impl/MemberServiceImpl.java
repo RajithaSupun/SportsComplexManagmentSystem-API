@@ -20,7 +20,6 @@ import java.util.List;
 
 @Service("memberService")
 @Transactional
-
 public class MemberServiceImpl implements MemberService {
     @Autowired
     MemberDao memberDao;
@@ -116,9 +115,24 @@ public class MemberServiceImpl implements MemberService {
             member.setGender(genderDao.get(memberVO.getGenderId()));
             member.setFirstName(memberVO.getFirstName());
             member.setLastName(memberVO.getLastName());
-            member.setDateOfBirth(commonFunction.getCurrentDateAndTimeByTimeZone(memberVO.getDateOfBirth()));
+            member.setDateOfBirth(commonFunction.getDateTimeByDateString(memberVO.getDateOfBirth()));
             member.setNic(memberVO.getNic());
             member.setMobileNumber(memberVO.getMobileNumber());
+            Measurement measurement =member.getMeasurement();
+
+            List<MeasurementVO>measurementList =memberVO.getMeasurement();
+            for (MeasurementVO m :measurementList) {
+                measurement.setWrist(Double.toString(m.getWrist()));
+                measurement.setAbdomen(Double.toString(m.getAbdomen()));
+                measurement.setLeftThigh(Double.toString(m.getLeft_thigh()));
+                measurement.setChest(Double.toString(m.getChest()));
+                measurement.setHips(Double.toString(m.getHips()));
+                measurement.setLeftThigh(Double.toString(m.getLeft_thigh()));
+                measurement.setLestArm(Double.toString(m.getLeft_arm()));
+                measurement.setLeftCalf(Double.toString(m.getLeft_calf()));
+                measurement.setRightThigh(Double.toString(m.getRight_thigh()));
+
+            }
             memberDao.save(member);
             return memberVO;
         } catch (Exception e) {
