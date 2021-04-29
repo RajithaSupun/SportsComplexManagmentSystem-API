@@ -4,12 +4,10 @@ import com.createvision.wijaya_sports.dao.GenderDao;
 import com.createvision.wijaya_sports.dao.MeasurementDao;
 import com.createvision.wijaya_sports.dao.MemberDao;
 import com.createvision.wijaya_sports.dao.RegistrationFreeDao;
+import com.createvision.wijaya_sports.dao.UserDao;
 import com.createvision.wijaya_sports.model.*;
 import com.createvision.wijaya_sports.service.MemberService;
-import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
-import com.createvision.wijaya_sports.valuesObject.MeasurementVO;
-import com.createvision.wijaya_sports.valuesObject.MemberVO;
-import com.createvision.wijaya_sports.valuesObject.RegistrationFeeVO;
+import com.createvision.wijaya_sports.valuesObject.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +30,8 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired
     MeasurementDao measurementDao;
+    @Autowired
+    UserDao userDao;
 
     @Autowired
     RegistrationFreeDao registrationFreeDao;
@@ -270,5 +270,20 @@ public class MemberServiceImpl implements MemberService {
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    @Override
+    public UserDetailVO userLogin(UserDetailVO userDetailVO) throws Exception {
+        User user =userDao.getUserByUsername(userDetailVO.getUserName());
+        if(user!=null){
+            if(user.getPassword().equals(userDetailVO.getPassword())){
+                userDetailVO.setSuccess(true);
+            }else{
+                userDetailVO.setSuccess(false);
+            }
+        }else{
+            userDetailVO.setSuccess(false);
+        }
+        return userDetailVO;
     }
 }

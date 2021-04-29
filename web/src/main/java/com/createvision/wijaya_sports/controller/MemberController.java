@@ -5,6 +5,7 @@ import com.createvision.wijaya_sports.service.MemberService;
 import com.createvision.wijaya_sports.valuesObject.EmployeeVO;
 import com.createvision.wijaya_sports.valuesObject.MemberVO;
 import com.createvision.wijaya_sports.valuesObject.ReturnVO;
+import com.createvision.wijaya_sports.valuesObject.UserDetailVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -129,6 +130,25 @@ public class MemberController {
             return ResponseEntity.ok(returnVO);
         }
 
+    }
+
+    @RequestMapping(value = "/loginUser/", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Object> loginUser(@RequestBody UserDetailVO userDetailVO) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            UserDetailVO userLogin = memberService.userLogin(userDetailVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(userLogin);
+            return ResponseEntity.ok(returnVO);
+
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
     }
 
 
