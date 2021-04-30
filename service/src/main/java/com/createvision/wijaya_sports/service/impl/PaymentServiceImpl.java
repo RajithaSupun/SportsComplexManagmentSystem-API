@@ -2,8 +2,10 @@ package com.createvision.wijaya_sports.service.impl;
 
 import com.createvision.wijaya_sports.dao.MemberDao;
 import com.createvision.wijaya_sports.dao.PaymentDao;
+import com.createvision.wijaya_sports.dao.RegistrationFreeDao;
 import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.model.Payment;
+import com.createvision.wijaya_sports.model.RegistrationFee;
 import com.createvision.wijaya_sports.service.PaymentService;
 import com.createvision.wijaya_sports.valuesObject.PaymentVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +28,16 @@ public class PaymentServiceImpl implements PaymentService {
     @Autowired
     MemberDao memberDao;
 
+    @Autowired
+    RegistrationFreeDao registrationFreeDao;
+
 
     @Override
     public List<PaymentVO> getAllPayment() throws Exception {
         try {
             List<PaymentVO> paymentVOList = new ArrayList<>();
             List<Payment> paymentList = paymentDao.getAll();
+            List<RegistrationFee> registrationFeesList =registrationFreeDao.getAll();
 
             for (Payment pay : paymentList) {
                 PaymentVO paymentVO = new PaymentVO();
@@ -42,6 +48,18 @@ public class PaymentServiceImpl implements PaymentService {
 
                 paymentVOList.add(paymentVO);
             }
+
+            for (RegistrationFee rg:registrationFeesList) {
+                PaymentVO paymentVO = new PaymentVO();
+                paymentVO.setAmount(rg.getAmount());
+                paymentVO.setDate(commonFunction.convertDateToString(rg.getDate()));
+                paymentVO.setMemberId(rg.getMember().getId());
+                paymentVO.setStatus("");
+
+                paymentVOList.add(paymentVO);
+
+            }
+
 
             return paymentVOList;
         } catch (Exception e) {

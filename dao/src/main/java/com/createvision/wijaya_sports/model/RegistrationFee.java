@@ -1,9 +1,6 @@
 package com.createvision.wijaya_sports.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,6 +20,11 @@ public class RegistrationFee extends BaseObject implements Serializable {
     @Column(name = "date")
     private Date date;
 
+    @Basic
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
+
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description;}
 
@@ -34,4 +36,7 @@ public class RegistrationFee extends BaseObject implements Serializable {
 
     public Date getDate() {return date;}
     public void setDate(Date date) {this.date = date;}
+
+    public Member getMember() {return member;}
+    public void setMember(Member member) {this.member = member;}
 }
