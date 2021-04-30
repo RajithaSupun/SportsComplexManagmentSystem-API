@@ -9,5 +9,6 @@ public interface PaymentService {
     PaymentVO createPayment(PaymentVO paymentVO)throws Exception;
     PaymentVO updatePayment(PaymentVO paymentVO)throws Exception;
     public void deletePayment(Long paymentId) throws Exception;
+    public PaymentVO createGuestPayment(PaymentVO paymentVO) throws Exception;
 
 }

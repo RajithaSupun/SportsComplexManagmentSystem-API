@@ -7,6 +7,7 @@ import java.util.Date;
 @Entity
 @Table(name = "registration_fee")
 public class RegistrationFee extends BaseObject implements Serializable {
+
     @Basic
     @Column(name = "description")
     private String description;

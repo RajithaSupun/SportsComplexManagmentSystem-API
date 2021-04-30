@@ -95,5 +95,24 @@ public class PaymentController {
         }
     }
 
+    @RequestMapping(value = "/guestPayment", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Object> createGuestPayment(@RequestBody PaymentVO PaymentVO) throws Exception {
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            PaymentVO paymentVO = paymentService.createPayment(PaymentVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(paymentVO);
+            return ResponseEntity.ok(returnVO);
+
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+
 
 }

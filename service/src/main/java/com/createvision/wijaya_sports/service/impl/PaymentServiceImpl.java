@@ -1,8 +1,10 @@
 package com.createvision.wijaya_sports.service.impl;
 
+import com.createvision.wijaya_sports.dao.GuestPaymentDao;
 import com.createvision.wijaya_sports.dao.MemberDao;
 import com.createvision.wijaya_sports.dao.PaymentDao;
 import com.createvision.wijaya_sports.dao.RegistrationFreeDao;
+import com.createvision.wijaya_sports.model.GuestPayment;
 import com.createvision.wijaya_sports.model.Member;
 import com.createvision.wijaya_sports.model.Payment;
 import com.createvision.wijaya_sports.model.RegistrationFee;
@@ -30,6 +32,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
     RegistrationFreeDao registrationFreeDao;
+
+    @Autowired
+    GuestPaymentDao guestPaymentDao;
 
 
     @Override
@@ -108,6 +113,25 @@ public class PaymentServiceImpl implements PaymentService {
         try {
             Payment payment = paymentDao.get(paymentId);
             paymentDao.delete(payment);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    @Override
+    public PaymentVO createGuestPayment(PaymentVO paymentVO) throws Exception {
+
+        try {
+
+
+            GuestPayment guestPayment =new GuestPayment();
+            guestPayment.setAmount(paymentVO.getAmount());
+            guestPayment.setName(paymentVO.getName());
+//            guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+          guestPayment.setRemark(paymentVO.getStatus());
+            guestPaymentDao.save(guestPayment);
+
+            return paymentVO;
         } catch (Exception e) {
             throw e;
         }
