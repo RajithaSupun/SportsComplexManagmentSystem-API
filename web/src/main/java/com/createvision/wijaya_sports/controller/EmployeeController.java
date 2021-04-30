@@ -72,10 +72,10 @@ public class EmployeeController {
     }
 
 
-    @RequestMapping(value = "/employeeUpdate", method = RequestMethod.PUT)
+    @RequestMapping(value = "/employeeUpdate", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<Object> updateEmployee(@RequestBody EmployeeVO employeeVO) throws Exception {
-        System.out.println("KKKKKKKK-----TTTTTT");
+
         ReturnVO returnVO = new ReturnVO();
         try {
             EmployeeVO employee = employeeService.updateEmployee(employeeVO);
