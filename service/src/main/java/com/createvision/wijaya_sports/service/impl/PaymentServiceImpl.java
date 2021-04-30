@@ -43,6 +43,7 @@ public class PaymentServiceImpl implements PaymentService {
             List<PaymentVO> paymentVOList = new ArrayList<>();
             List<Payment> paymentList = paymentDao.getAll();
             List<RegistrationFee> registrationFeesList =registrationFreeDao.getAll();
+            List<GuestPayment>guestPaymentList =guestPaymentDao.getAll();
 
             for (Payment pay : paymentList) {
                 PaymentVO paymentVO = new PaymentVO();
@@ -64,6 +65,18 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVOList.add(paymentVO);
 
             }
+
+            for (GuestPayment guest:guestPaymentList) {
+                PaymentVO paymentVO = new PaymentVO();
+                paymentVO.setAmount(guest.getAmount());
+                paymentVO.setDate(commonFunction.convertDateToString(guest.getDate()));
+                paymentVO.setName(guest.getName());
+                paymentVO.setStatus("");
+
+                paymentVOList.add(paymentVO);
+            }
+
+
 
 
             return paymentVOList;
@@ -127,8 +140,8 @@ public class PaymentServiceImpl implements PaymentService {
             GuestPayment guestPayment =new GuestPayment();
             guestPayment.setAmount(paymentVO.getAmount());
             guestPayment.setName(paymentVO.getName());
-//            guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
-          guestPayment.setRemark(paymentVO.getStatus());
+            guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+            guestPayment.setRemark(paymentVO.getStatus());
             guestPaymentDao.save(guestPayment);
 
             return paymentVO;

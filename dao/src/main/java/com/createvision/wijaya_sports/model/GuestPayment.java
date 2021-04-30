@@ -27,4 +27,7 @@ public class GuestPayment extends BaseObject implements Serializable {
 
     public String getRemark() {return remark;}
     public void setRemark(String remark) {this.remark = remark;}
+
+    public Date getDate() {return date;}
+    public void setDate(Date date) {this.date = date;}
 }
