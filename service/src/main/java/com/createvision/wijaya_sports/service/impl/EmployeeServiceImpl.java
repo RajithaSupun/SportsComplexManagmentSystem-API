@@ -103,10 +103,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         try {
             Employee employee = employeeDao.get(employeeVO.getId());
             employee.setAddress(employeeVO.getAddress());
-            employee.setGender(genderDao.get(employeeVO.getGenderId()));
+//            employee.setGender(genderDao.get(employeeVO.getGenderId()));
             employee.setFirstName(employeeVO.getFirstName());
             employee.setLastName(employeeVO.getLastName());
-            employee.setDateOfBirth(commonFunction.getCurrentDateAndTimeByTimeZone(employeeVO.getDateOfBirth()));
+            employee.setDateOfBirth(commonFunction.getDateTimeByDateString(employeeVO.getDateOfBirth()));
             employee.setNic(employeeVO.getNic());
             employee.setLandphone_Number(employeeVO.getMobileNumber());
             employeeDao.save(employee);
