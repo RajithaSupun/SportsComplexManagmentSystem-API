@@ -40,13 +40,13 @@ public class MemberServiceImpl implements MemberService {
     public MemberVO createNewMember(MemberVO memberVO) throws Exception {
         try {
             Member member = new Member();
-            Gender gender = genderDao.get(memberVO.getGenderId());
+//            Gender gender = genderDao.get(memberVO.getGenderId());
             member.setFirstName(memberVO.getFirstName());
             member.setLastName(memberVO.getLastName());
             member.setAddress(memberVO.getAddress());
             member.setNic(memberVO.getNic());
             member.setDateOfBirth(commonFunction.getDateTimeByDateString(memberVO.getDateOfBirth()));
-            member.setGender(gender);
+//            member.setGender(gender);
             member.setJoinDate(commonFunction.getDateTimeByDateString(memberVO.getJoinedDate()));
             member.setSports(Sports.GYM);
             member.setMobileNumber(memberVO.getMobileNumber());
