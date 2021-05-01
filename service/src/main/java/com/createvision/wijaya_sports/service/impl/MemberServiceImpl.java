@@ -279,6 +279,7 @@ public class MemberServiceImpl implements MemberService {
             if(user.getPassword().equals(userDetailVO.getPassword())){
                 userDetailVO.setSuccess(true);
                 userDetailVO.setRoleId(user.getRoleId());
+                userDetailVO.setName(user.getName());
             }else{
                 userDetailVO.setSuccess(false);
             }

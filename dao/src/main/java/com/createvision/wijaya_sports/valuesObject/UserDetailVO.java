@@ -6,6 +6,8 @@ public class UserDetailVO {
     private String role;
     private boolean isSuccess;
     private int roleId;
+    private Long userId;
+    private String name;
 
     public String getUserName() {return userName;}
     public void setUserName(String userName) {this.userName = userName;}
@@ -19,11 +21,12 @@ public class UserDetailVO {
     public boolean isSuccess() {return isSuccess;}
     public void setSuccess(boolean success) {isSuccess = success;}
 
-    public int getRoleId() {
-        return roleId;
-    }
+    public int getRoleId() {return roleId;}
+    public void setRoleId(int roleId) {this.roleId = roleId;}
 
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
+    public Long getUserId() {return userId;}
+    public void setUserId(Long userId) {this.userId = userId;}
+
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
 }
