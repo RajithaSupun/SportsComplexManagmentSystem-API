@@ -71,7 +71,7 @@ public class MemberServiceImpl implements MemberService {
                 RegistrationFee registrationFee = new RegistrationFee();
                 registrationFee.setAmount(rgis.getAmount());
                 registrationFee.setDescription(rgis.getDescription());
-                //  registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
+                registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
                 Long saveId = registrationFreeDao.save(registrationFee);
                 saveRegistrationFee = registrationFreeDao.get(saveId);
             }
