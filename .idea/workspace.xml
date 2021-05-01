@@ -9,16 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="change column name as remark in payment table">
+    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="change method in update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/RegistrationFee.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/RegistrationFee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/GuestPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/GuestPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/PaymentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
@@ -111,12 +115,13 @@
       <method v="2" />
     </configuration>
     <configuration name="tomcat_server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Wijaya_Sports_Complex_API/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="web:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/wijaya_sports_complex_management_system" />
+            <option name="CONTEXT_PATH" value="/Wijaya_Sports_Complex_API" />
           </settings>
         </artifact>
       </deployment>
@@ -268,133 +273,12 @@
       <workItem from="1619432927953" duration="1632000" />
       <workItem from="1619538505855" duration="3689000" />
       <workItem from="1619711025298" duration="3663000" />
-      <workItem from="1619795998871" duration="979000" />
-    </task>
-    <task id="LOCAL-00004" summary="add new values object">
-      <created>1567439973430</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1567439973430</updated>
-    </task>
-    <task id="LOCAL-00005" summary="change file name">
-      <created>1567440062312</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1567440062312</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add new values object">
-      <created>1567440422739</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1567440422739</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add new values object and remove unwanted values object">
-      <created>1567442878981</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1567442878981</updated>
-    </task>
-    <task id="LOCAL-00008" summary="modified invoice control file">
-      <created>1567444795371</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1567444795371</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add transaction to invoice service">
-      <created>1567445808877</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1567445808877</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add new values object to send result to UI">
-      <created>1567475189965</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1567475189966</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add git file">
-      <created>1567476504790</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1567476504790</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add return values object to get invoice function">
-      <created>1567476596184</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1567476596184</updated>
-    </task>
-    <task id="LOCAL-00013" summary="change file name">
-      <created>1587796246539</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1587796246539</updated>
-    </task>
-    <task id="LOCAL-00014" summary="validate get user data.">
-      <created>1587797924186</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1587797924186</updated>
-    </task>
-    <task id="LOCAL-00015" summary="code formatted">
-      <created>1587797994147</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1587797994147</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add new quarry to get all employee without delete and add new controller to delete employee">
-      <created>1587879752685</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1587879752685</updated>
-    </task>
-    <task id="LOCAL-00017" summary="add edit controller to edit Employee">
-      <created>1587884405669</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1587884405669</updated>
-    </task>
-    <task id="LOCAL-00018" summary="test git commit">
-      <created>1602777897454</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1602777897454</updated>
-    </task>
-    <task id="LOCAL-00019" summary="add new file for employees add">
-      <created>1602779070647</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1602779070648</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add member function">
-      <created>1602780363809</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1602780363809</updated>
-    </task>
-    <task id="LOCAL-00021" summary="commit un commit file">
-      <created>1603386718341</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1603386718341</updated>
+      <workItem from="1619795998871" duration="6516000" />
+      <workItem from="1619837810598" duration="361000" />
+      <workItem from="1619838285077" duration="1131000" />
+      <workItem from="1619843360872" duration="16446000" />
+      <workItem from="1619884661931" duration="1008000" />
+      <workItem from="1619890169884" duration="2358000" />
     </task>
     <task id="LOCAL-00022" summary="add two table">
       <created>1603389919973</created>
@@ -613,31 +497,139 @@
       <option name="project" value="LOCAL" />
       <updated>1619718758353</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="add new function to get registration fee">
+      <created>1619797365805</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1619797365805</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add new function to save guest payment">
+      <created>1619799766386</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1619799766386</updated>
+    </task>
+    <task id="LOCAL-00055" summary="set guest payment">
+      <created>1619800825808</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1619800825809</updated>
+    </task>
+    <task id="LOCAL-00056" summary="change method in update">
+      <created>1619801478908</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1619801478908</updated>
+    </task>
+    <task id="LOCAL-00057" summary="remove gender ID when update">
+      <created>1619802744273</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1619802744273</updated>
+    </task>
+    <task id="LOCAL-00058" summary="correct some errors">
+      <created>1619803856267</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1619803856267</updated>
+    </task>
+    <task id="LOCAL-00059" summary="pass role id to UI">
+      <created>1619838030318</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1619838030319</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add user name">
+      <created>1619838606447</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1619838606447</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add new function to get report data">
+      <created>1619863092776</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1619863092776</updated>
+    </task>
+    <task id="LOCAL-00062" summary="change some code">
+      <created>1619864139315</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1619864139315</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add gender ID to member table">
+      <created>1619864349580</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1619864349580</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add date">
+      <created>1619864438508</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1619864438508</updated>
+    </task>
+    <task id="LOCAL-00065" summary="change some code in delete">
+      <created>1619865683937</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1619865683937</updated>
+    </task>
+    <task id="LOCAL-00066" summary="add new table">
+      <created>1619871415618</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1619871415618</updated>
+    </task>
+    <task id="LOCAL-00067" summary="add new column to guest payment table">
+      <created>1619890699181</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1619890699181</updated>
+    </task>
+    <task id="LOCAL-00068" summary="add and get user id">
+      <created>1619891265566</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1619891265566</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add user ID">
+      <created>1619891870589</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1619891870589</updated>
+    </task>
+    <task id="LOCAL-00070" summary="add reservation add function">
+      <created>1619892272055</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1619892272056</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add payment controller and reservation controller" />
-    <MESSAGE value="add delete and update function in payment" />
-    <MESSAGE value="add employee Id" />
-    <MESSAGE value="add employee id" />
-    <MESSAGE value="add new create function to payment" />
-    <MESSAGE value="Add employee delete function;" />
-    <MESSAGE value="Add employee Update function;" />
-    <MESSAGE value="Add Reservation Update and delete function function;" />
-    <MESSAGE value="add memner Delete and update" />
-    <MESSAGE value="add get all function in member" />
-    <MESSAGE value="modifyed member create function" />
-    <MESSAGE value="add new function to get all member details" />
-    <MESSAGE value="validate null values" />
-    <MESSAGE value="Add user create" />
-    <MESSAGE value="add user details when add employee" />
-    <MESSAGE value="add password and user name when get all employee" />
-    <MESSAGE value="add new column and set date to get function" />
-    <MESSAGE value="add add designation when create new employee" />
     <MESSAGE value="get member details by id" />
     <MESSAGE value="add mobile number to member table" />
     <MESSAGE value="change column name as remark in payment table" />
@@ -645,30 +637,24 @@
     <MESSAGE value="add land phone number to member table." />
     <MESSAGE value="correct member update" />
     <MESSAGE value="create simple login funtion" />
-    <option name="LAST_COMMIT_MESSAGE" value="create simple login funtion" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/EmployeeController.java</url>
-          <line>76</line>
-          <properties class="com.createvision.wijaya_sports.controller.EmployeeController" method="updateEmployee">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add new function to get registration fee" />
+    <MESSAGE value="add new function to save guest payment" />
+    <MESSAGE value="set guest payment" />
+    <MESSAGE value="change method in update" />
+    <MESSAGE value="remove gender ID when update" />
+    <MESSAGE value="correct some errors" />
+    <MESSAGE value="pass role id to UI" />
+    <MESSAGE value="add user name" />
+    <MESSAGE value="add new function to get report data" />
+    <MESSAGE value="change some code" />
+    <MESSAGE value="add gender ID to member table" />
+    <MESSAGE value="add date" />
+    <MESSAGE value="change some code in delete" />
+    <MESSAGE value="add new table" />
+    <MESSAGE value="add new column to guest payment table" />
+    <MESSAGE value="add and get user id" />
+    <MESSAGE value="add user ID" />
+    <MESSAGE value="add reservation add function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reservation add function" />
   </component>
 </project>
