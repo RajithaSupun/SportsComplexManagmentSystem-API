@@ -17,7 +17,7 @@ public class MemberVO {
     private String sportName;
     private List<MeasurementVO> measurement;
     private List<RegistrationFeeVO> registrationFee;
-    private List<SportVO> sportsId1;
+    private List<SportVO> sportsIdList;
 
 
 
@@ -63,6 +63,11 @@ public class MemberVO {
     public List<RegistrationFeeVO> getRegistrationFee() {return registrationFee;}
     public void setRegistrationFee(List<RegistrationFeeVO> registrationFee) {this.registrationFee = registrationFee;}
 
-//    public List<SportVO> getSportsId1() {return sportsId1;}
-//    public void setSportsId1(List<SportVO> sportsId1) {this.sportsId1 = sportsId1;}
+    public List<SportVO> getSportsIdList() {
+        return sportsIdList;
+    }
+
+    public void setSportsIdList(List<SportVO> sportsIdList) {
+        this.sportsIdList = sportsIdList;
+    }
 }

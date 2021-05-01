@@ -1,10 +1,6 @@
 package com.createvision.wijaya_sports.service.impl;
 
-import com.createvision.wijaya_sports.dao.GenderDao;
-import com.createvision.wijaya_sports.dao.MeasurementDao;
-import com.createvision.wijaya_sports.dao.MemberDao;
-import com.createvision.wijaya_sports.dao.RegistrationFreeDao;
-import com.createvision.wijaya_sports.dao.UserDao;
+import com.createvision.wijaya_sports.dao.*;
 import com.createvision.wijaya_sports.model.*;
 import com.createvision.wijaya_sports.service.MemberService;
 import com.createvision.wijaya_sports.valuesObject.*;
@@ -35,6 +31,9 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired
     RegistrationFreeDao registrationFreeDao;
+
+    @Autowired
+    MemberSportDao memberSportDao;
 
     @Override
     public MemberVO createNewMember(MemberVO memberVO) throws Exception {
@@ -77,17 +76,27 @@ public class MemberServiceImpl implements MemberService {
             }
 
             member.setRegistrationFee(saveRegistrationFee);
-
-
-            if (memberVO.getSportId() == 1) {
-                member.setSports(Sports.BADMINTON);
-            } else if (memberVO.getSportId() == 2) {
-                member.setSports(Sports.SWIMMING);
-            } else {
-                member.setSports(Sports.GYM);
-            }
             System.out.println("Come to this");
-            memberDao.save(member);
+            Long id = memberDao.save(member);
+
+            List<SportVO> sportVOList = memberVO.getSportsIdList();
+
+            for (SportVO spot : sportVOList) {
+                String sportName;
+                if (spot.getSportsId() == 1) {
+                    sportName = "BADMINTON";
+                } else if (spot.getSportsId() == 2) {
+                    sportName = "SWIMMING";
+                } else {
+                    sportName = "GYM";
+                }
+                MemberSport memberSport = new MemberSport();
+                memberSport.setMember(memberDao.get(id));
+                memberSport.setName(sportName);
+
+                memberSportDao.save(memberSport);
+
+            }
 
         } catch (Exception e) {
             throw e;
@@ -118,10 +127,10 @@ public class MemberServiceImpl implements MemberService {
             member.setDateOfBirth(commonFunction.getDateTimeByDateString(memberVO.getDateOfBirth()));
             member.setNic(memberVO.getNic());
             member.setMobileNumber(memberVO.getMobileNumber());
-            Measurement measurement =member.getMeasurement();
+            Measurement measurement = member.getMeasurement();
 
-            List<MeasurementVO>measurementList =memberVO.getMeasurement();
-            for (MeasurementVO m :measurementList) {
+            List<MeasurementVO> measurementList = memberVO.getMeasurement();
+            for (MeasurementVO m : measurementList) {
                 measurement.setWrist(Double.toString(m.getWrist()));
                 measurement.setAbdomen(Double.toString(m.getAbdomen()));
                 measurement.setLeftThigh(Double.toString(m.getLeft_thigh()));
@@ -157,7 +166,7 @@ public class MemberServiceImpl implements MemberService {
                 memberVO.setJoinedDate(commonFunction.convertDateToString(member.getJoinDate()));
                 memberVO.setMobileNumber(member.getMobileNumber());
                 memberVO.setSportName(member.getSports().name());
-                memberVO.setMobileNumber(member.getMobileNumber()!=null ? member.getMobileNumber():"");
+                memberVO.setMobileNumber(member.getMobileNumber() != null ? member.getMobileNumber() : "");
                 Gender gender = genderDao.get(member.getGender().getId());
                 memberVO.setGenderId(gender.getId());
                 memberVOList.add(memberVO);
@@ -263,7 +272,6 @@ public class MemberServiceImpl implements MemberService {
                 memberVO.setMeasurement(measurementVOList);
 
 
-
             }
             return memberVO;
 
@@ -274,16 +282,16 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public UserDetailVO userLogin(UserDetailVO userDetailVO) throws Exception {
-        User user =userDao.getUserByUsername(userDetailVO.getUserName());
-        if(user!=null){
-            if(user.getPassword().equals(userDetailVO.getPassword())){
+        User user = userDao.getUserByUsername(userDetailVO.getUserName());
+        if (user != null) {
+            if (user.getPassword().equals(userDetailVO.getPassword())) {
                 userDetailVO.setSuccess(true);
                 userDetailVO.setRoleId(user.getRoleId());
                 userDetailVO.setName(user.getName());
-            }else{
+            } else {
                 userDetailVO.setSuccess(false);
             }
-        }else{
+        } else {
             userDetailVO.setSuccess(false);
         }
         return userDetailVO;
