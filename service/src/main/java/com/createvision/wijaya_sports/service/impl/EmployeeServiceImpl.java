@@ -44,6 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             employee.setLandphone_Number(employeeVO.getLandPhoneNumber());
             employee.setGender(gender);
             employee.setDesignation(employeeVO.getDesignation());
+            employee.setUser(userDao.get(employeeVO.getUserId()));
             employeeDao.save(employee);
             user.setUserName(employeeVO.getUserName());
             user.setPassword(employeeVO.getPassword());
@@ -78,6 +79,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeVO.setUserName(employee.getUser().getUserName() != null ? employee.getUser().getUserName() : "");
                 employeeVO.setPassword(employee.getUser().getPassword() != null ? employee.getUser().getPassword() : "");
                 employeeVO.setDesignation(employee.getDesignation() != null ? employee.getDesignation() : "");
+                employeeVO.setUserId(employee.getUser().getId());
+
 
                 employeeVOList.add(employeeVO);
 
