@@ -142,6 +142,9 @@ public class PaymentServiceImpl implements PaymentService {
             guestPayment.setName(paymentVO.getName());
             guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
             guestPayment.setRemark(paymentVO.getStatus());
+            guestPayment.setGuestNIC(paymentVO.getGuestNIC());
+            guestPayment.setGuestName(paymentVO.getGuestName());
+            guestPayment.setGuestMobile(paymentVO.getGuestMobile());
             guestPaymentDao.save(guestPayment);
 
             return paymentVO;

@@ -8,6 +8,9 @@ public class PaymentVO {
     private String date;
     private Long memberId;
     private String name;
+    private String guestMobile;
+    private String guestNIC;
+    private String guestName;
 
     public String getStatus() {return status;}
     public void setStatus(String status) {this.status = status;}
@@ -23,4 +26,28 @@ public class PaymentVO {
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
+
+    public String getGuestMobile() {
+        return guestMobile;
+    }
+
+    public void setGuestMobile(String guestMobile) {
+        this.guestMobile = guestMobile;
+    }
+
+    public String getGuestNIC() {
+        return guestNIC;
+    }
+
+    public void setGuestNIC(String guestNIC) {
+        this.guestNIC = guestNIC;
+    }
+
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
+    }
 }

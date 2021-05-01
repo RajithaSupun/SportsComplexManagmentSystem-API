@@ -19,6 +19,18 @@ public class GuestPayment extends BaseObject implements Serializable {
     @Column(name = "date")
     private Date date;
 
+    @Basic
+    @Column(name = "guest_mobile")
+    private String guestMobile;
+
+    @Basic
+    @Column(name = "guest_nic")
+    private String guestNIC;
+
+    @Basic
+    @Column(name = "guest_name")
+    private String guestName;
+
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
 
@@ -30,4 +42,26 @@ public class GuestPayment extends BaseObject implements Serializable {
 
     public Date getDate() {return date;}
     public void setDate(Date date) {this.date = date;}
+
+    public String getGuestMobile() {return guestMobile;}
+
+    public void setGuestMobile(String guestMobile) {
+        this.guestMobile = guestMobile;
+    }
+
+    public String getGuestNIC() {
+        return guestNIC;
+    }
+
+    public void setGuestNIC(String guestNIC) {
+        this.guestNIC = guestNIC;
+    }
+
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
+    }
 }
