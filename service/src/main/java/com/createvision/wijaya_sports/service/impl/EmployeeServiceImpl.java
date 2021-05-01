@@ -44,11 +44,14 @@ public class EmployeeServiceImpl implements EmployeeService {
             employee.setLandphone_Number(employeeVO.getLandPhoneNumber());
             employee.setGender(gender);
             employee.setDesignation(employeeVO.getDesignation());
-            employee.setUser(userDao.get(employeeVO.getUserId()));
-            employeeDao.save(employee);
+
+
             user.setUserName(employeeVO.getUserName());
             user.setPassword(employeeVO.getPassword());
-            userDao.save(user);
+            Long userId = userDao.save(user);
+            employee.setUser(userDao.get(userId));
+            employeeDao.save(employee);
+
 
             return employeeVO;
 
