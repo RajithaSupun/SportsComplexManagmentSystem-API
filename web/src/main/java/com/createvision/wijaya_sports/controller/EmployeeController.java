@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "*", allowCredentials = "true", allowedHeaders = "*")
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -53,7 +53,7 @@ public class EmployeeController {
         }
 
     }
-    @RequestMapping(value = "/{employeeId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{employeeId}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Object> deletePayment(@PathVariable("employeeId") Long paymentId) throws Exception {
 
