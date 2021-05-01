@@ -52,6 +52,7 @@ public class ReservationServiceImpl implements ReservationService {
             reservation.setDate(commonFunction.getDateTimeByDateString(reservationVO.getDate()));
             reservation.setTime(reservationVO.getTime());
             reservation.setContactNumber(reservationVO.getContactNumber());
+            reservation.setSport(reservationVO.getSport());
             reservationDao.save(reservation);
 
             return reservationVO;

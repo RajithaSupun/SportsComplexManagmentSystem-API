@@ -55,6 +55,27 @@ public class ReservationController {
         }
     }
 
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Object>createReservation(@RequestBody ReservationVO reservationVO)throws Exception{
+
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            ReservationVO updatedReservation = reservationService.createReservation(reservationVO);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            returnVO.setResult(updatedReservation);
+            return ResponseEntity.ok(returnVO);
+
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
+
 //    @RequestMapping(value = "/{paymentId}", method = RequestMethod.DELETE)
 //    @ResponseBody
 //    public ResponseEntity<Object> deleteReservation(@PathVariable("reservationId") Long reservationId) throws Exception {
