@@ -51,6 +51,7 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setDate(commonFunction.convertDateToString(pay.getDate()));
                 paymentVO.setMemberId(pay.getMember().getId());
                 paymentVO.setStatus(pay.getRemark());
+                paymentVO.setId(pay.getId());
 
                 paymentVOList.add(paymentVO);
             }

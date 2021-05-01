@@ -11,7 +11,7 @@ public class PaymentVO {
     private String guestMobile;
     private String guestNIC;
     private String guestName;
-
+    private Long id;
     public String getStatus() {return status;}
     public void setStatus(String status) {this.status = status;}
 
@@ -49,5 +49,13 @@ public class PaymentVO {
 
     public void setGuestName(String guestName) {
         this.guestName = guestName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
