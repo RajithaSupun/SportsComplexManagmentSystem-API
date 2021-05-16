@@ -76,21 +76,21 @@ public class ReservationController {
         }
     }
 
-//    @RequestMapping(value = "/{paymentId}", method = RequestMethod.DELETE)
-//    @ResponseBody
-//    public ResponseEntity<Object> deleteReservation(@PathVariable("reservationId") Long reservationId) throws Exception {
-//
-//        ReturnVO returnVO = new ReturnVO();
-//        try {
-//            paymentService.deletePayment(paymentId);
-//            returnVO.setStatusCode(200);
-//            returnVO.setSuccess(true);
-//            return ResponseEntity.ok(returnVO);
-//        } catch (Exception e) {
-//            returnVO.setResult(e);
-//            returnVO.setStatusCode(5001);
-//            returnVO.setSuccess(false);
-//            return ResponseEntity.ok(returnVO);
-//        }
-//    }
+    @RequestMapping(value = "/{paymentId}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public ResponseEntity<Object> deleteReservation(@PathVariable("reservationId") Long reservationId) throws Exception {
+
+        ReturnVO returnVO = new ReturnVO();
+        try {
+            reservationService.deleteReservation(reservationId);
+            returnVO.setStatusCode(200);
+            returnVO.setSuccess(true);
+            return ResponseEntity.ok(returnVO);
+        } catch (Exception e) {
+            returnVO.setResult(e);
+            returnVO.setStatusCode(5001);
+            returnVO.setSuccess(false);
+            return ResponseEntity.ok(returnVO);
+        }
+    }
 }

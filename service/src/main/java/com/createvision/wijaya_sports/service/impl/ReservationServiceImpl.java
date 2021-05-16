@@ -70,6 +70,7 @@ public class ReservationServiceImpl implements ReservationService {
     public ReservationVO updateReservation(ReservationVO reservationVO) throws Exception {
 
         try {
+
             Reservation reservation = reservationDao.get(reservationVO.getReservationId());
             reservation.setSport(reservationVO.getSport());
             reservation.setDate(commonFunction.getDateTimeByDateString(reservationVO.getDate()));

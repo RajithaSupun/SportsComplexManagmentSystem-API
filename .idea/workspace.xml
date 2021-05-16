@@ -9,22 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="change method in update">
+    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/GuestPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/src/main/java/com/createvision/wijaya_sports/model/GuestPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/EmployeeVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/MemberService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,21 +274,13 @@
       <workItem from="1619838285077" duration="1131000" />
       <workItem from="1619843360872" duration="16446000" />
       <workItem from="1619884661931" duration="1008000" />
-      <workItem from="1619890169884" duration="2358000" />
-    </task>
-    <task id="LOCAL-00022" summary="add two table">
-      <created>1603389919973</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1603389919973</updated>
-    </task>
-    <task id="LOCAL-00023" summary="added two new API function of reservation and payment.">
-      <created>1610814902825</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1610814902825</updated>
+      <workItem from="1619890169884" duration="3156000" />
+      <workItem from="1620232589361" duration="476000" />
+      <workItem from="1620233833588" duration="671000" />
+      <workItem from="1620748178269" duration="169000" />
+      <workItem from="1620827974483" duration="7000" />
+      <workItem from="1621055571902" duration="1372000" />
+      <workItem from="1621164422505" duration="1414000" />
     </task>
     <task id="LOCAL-00024" summary="add payment controller and reservation controller">
       <created>1610815336258</created>
@@ -623,14 +611,27 @@
       <option name="project" value="LOCAL" />
       <updated>1619892272056</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="add new column to guest payment table">
+      <created>1619894276833</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1619894276833</updated>
+    </task>
+    <task id="LOCAL-00072" summary="add payment ID">
+      <created>1619894924398</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1619894924398</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get member details by id" />
     <MESSAGE value="add mobile number to member table" />
     <MESSAGE value="change column name as remark in payment table" />
     <MESSAGE value="add land number" />
@@ -651,10 +652,11 @@
     <MESSAGE value="add date" />
     <MESSAGE value="change some code in delete" />
     <MESSAGE value="add new table" />
-    <MESSAGE value="add new column to guest payment table" />
     <MESSAGE value="add and get user id" />
     <MESSAGE value="add user ID" />
     <MESSAGE value="add reservation add function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add reservation add function" />
+    <MESSAGE value="add new column to guest payment table" />
+    <MESSAGE value="add payment ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="add payment ID" />
   </component>
 </project>
