@@ -12,6 +12,7 @@ public class PaymentVO {
     private String guestNIC;
     private String guestName;
     private Long id;
+    private int tableID;
 
     public int getPaymentCounter() {
         return paymentCounter;
@@ -88,5 +89,13 @@ public class PaymentVO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getTableID() {
+        return tableID;
+    }
+
+    public void setTableID(int tableID) {
+        this.tableID = tableID;
     }
 }

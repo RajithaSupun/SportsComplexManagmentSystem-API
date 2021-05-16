@@ -77,13 +77,13 @@ public class PaymentController {
         }
     }
 
-    @RequestMapping(value = "/{paymentId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{paymentId}/{tableId}", method = RequestMethod.DELETE)
     @ResponseBody
-    public ResponseEntity<Object> deletePayment(@PathVariable("paymentId") Long paymentId) throws Exception {
+    public ResponseEntity<Object> deletePayment(@PathVariable("paymentId") Long paymentId, @PathVariable("tableId") int tableId) throws Exception {
 
         ReturnVO returnVO = new ReturnVO();
         try {
-            paymentService.deletePayment(paymentId);
+            paymentService.deletePayment(paymentId,tableId);
             returnVO.setStatusCode(200);
             returnVO.setSuccess(true);
             return ResponseEntity.ok(returnVO);

@@ -58,6 +58,7 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setGuestMobile(member.getMobileNumber());
                 paymentVO.setGuestNIC(member.getNic());
                 paymentVO.setPaymentCounter(counter);
+                paymentVO.setTableID(1);
                 counter++;
 
                 paymentVOList.add(paymentVO);
@@ -70,6 +71,7 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setMemberId(rg.getMember() !=null ? rg.getMember().getId():0);
                 paymentVO.setStatus("");
                 paymentVO.setPaymentCounter(counter);
+                paymentVO.setTableID(2);
                 counter++;
 
                 paymentVOList.add(paymentVO);
@@ -87,6 +89,7 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setGuestMobile(guest.getGuestMobile());
                 paymentVO.setId(guest.getId());
                 paymentVO.setPaymentCounter(counter);
+                paymentVO.setTableID(3);
                 counter++;
 
                 paymentVOList.add(paymentVO);
@@ -138,7 +141,7 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public PaymentVO updatePayment(PaymentVO paymentVO) throws Exception {
         try {
-            Payment payment = paymentDao.get(paymentVO.getMemberId());
+            Payment payment = paymentDao.get(paymentVO.getId());
             Member member = memberDao.get(paymentVO.getMemberId());
             payment.setMember(member);
             payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
@@ -152,11 +155,20 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public void deletePayment(Long paymentId) throws Exception {
+    public void deletePayment(Long paymentId ,int tableId) throws Exception {
 
         try {
-            Payment payment = paymentDao.get(paymentId);
-            paymentDao.delete(payment);
+            if(tableId ==1){
+                Payment payment = paymentDao.get(paymentId);
+                paymentDao.delete(payment);
+            }else if(tableId ==2){
+                RegistrationFee registrationFee =registrationFreeDao.get(paymentId);
+                registrationFreeDao.delete(registrationFee);
+            } else if(tableId ==3){
+                GuestPayment guestPayment =guestPaymentDao.get(paymentId);
+                guestPaymentDao.delete(guestPayment);
+            }
+
         } catch (Exception e) {
             throw e;
         }

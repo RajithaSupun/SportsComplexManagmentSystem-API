@@ -66,10 +66,23 @@ public class MemberServiceImpl implements MemberService {
             }
             member.setMeasurement(saveMeasurement);
             RegistrationFee saveRegistrationFee = new RegistrationFee();
+//            for (RegistrationFeeVO rgis : memberVO.getRegistrationFee()) {
+//                RegistrationFee registrationFee = new RegistrationFee();
+//                registrationFee.setAmount(rgis.getAmount());
+//                registrationFee.setMember(memberDao.get(memberVO.getMemberId()));
+//                registrationFee.setDescription(rgis.getDescription());
+//                registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
+//                Long saveId = registrationFreeDao.save(registrationFee);
+//                saveRegistrationFee = registrationFreeDao.get(saveId);
+//            }
+
+//            member.setRegistrationFee(saveRegistrationFee);
+            System.out.println("Come to this");
+            Long id = memberDao.save(member);
             for (RegistrationFeeVO rgis : memberVO.getRegistrationFee()) {
                 RegistrationFee registrationFee = new RegistrationFee();
                 registrationFee.setAmount(rgis.getAmount());
-                registrationFee.setMember(memberDao.get(memberVO.getMemberId()));
+                registrationFee.setMember(memberDao.get(id));
                 registrationFee.setDescription(rgis.getDescription());
                 registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
                 Long saveId = registrationFreeDao.save(registrationFee);
@@ -77,8 +90,8 @@ public class MemberServiceImpl implements MemberService {
             }
 
             member.setRegistrationFee(saveRegistrationFee);
-            System.out.println("Come to this");
-            Long id = memberDao.save(member);
+            memberDao.save(member);
+
 
             List<SportVO> sportVOList = memberVO.getSportsIdList();
 
@@ -179,6 +192,25 @@ public class MemberServiceImpl implements MemberService {
                 memberVO.setMobileNumber(member.getMobileNumber() != null ? member.getMobileNumber() : "");
                 Gender gender = genderDao.get(member.getGender().getId());
                 memberVO.setGenderId(gender.getId());
+                List<SportVO>sportVOList =new ArrayList<>();
+                List<MemberSport>memberSportList =memberSportDao.getAll();
+                for (MemberSport m:memberSportList) {
+                    SportVO sportVO = new SportVO();
+                    if(m.getMember().getId() == member.getId()){
+
+                        if(m.getName().trim().equals(Sports.valueOf("BADMINTON"))){
+                            sportVO.setSportsId(1);
+                        }else if(m.getName().trim().equals(Sports.valueOf("SWIMMING"))){
+                            sportVO.setSportsId(2);
+                        }else if(m.getName().trim().equals(Sports.valueOf("GYM"))){
+                            sportVO.setSportsId(3);
+                        }
+                    }
+
+                    sportVOList.add(sportVO);
+
+                }
+                memberVO.setSportsIdList(sportVOList);
                 memberVOList.add(memberVO);
 
             }
@@ -307,8 +339,8 @@ public class MemberServiceImpl implements MemberService {
         return userDetailVO;
     }
 
-    @Override
-    public MemberVO getMemberByNIC(String nic) throws Exception {
-        return null;
-    }
+//    @Override
+//    public MemberVO getMemberByNIC(String nic) throws Exception {
+//        return null;
+//    }
 }

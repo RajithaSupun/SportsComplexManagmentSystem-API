@@ -31,6 +31,7 @@ public class MemberController {
             returnVO.setStatusCode(200);
             return ResponseEntity.ok(returnVO);
         } catch (Exception e) {
+            e.printStackTrace();
             returnVO.setResult(e);
             returnVO.setStatusCode(5001);
             returnVO.setSuccess(false);

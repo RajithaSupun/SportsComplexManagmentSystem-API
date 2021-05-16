@@ -21,4 +21,13 @@ public class PaymentDaoImpl extends AbstractDaoImpl<Payment, Long> implements Pa
         List<Object[]> result = query.list();
         return result;
     }
+
+    @Override
+    public List<Payment> getPaymentByNic(String nic) throws Exception {
+        Query query = getSession().createSQLQuery("SELECT * FROM payment WHERE ");
+//        query.setParameter(0,fromDate);
+//        query.setParameter(1,toDate);
+        List<Object[]> result = query.list();
+        return null;
+    }
 }
