@@ -12,6 +12,37 @@ public class PaymentVO {
     private String guestNIC;
     private String guestName;
     private Long id;
+
+    public int getPaymentCounter() {
+        return paymentCounter;
+    }
+
+    public void setPaymentCounter(int paymentCounter) {
+        this.paymentCounter = paymentCounter;
+    }
+
+    private int paymentCounter;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    private String gender;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private String address;
+
     public String getStatus() {return status;}
     public void setStatus(String status) {this.status = status;}
 

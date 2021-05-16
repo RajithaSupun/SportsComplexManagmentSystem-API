@@ -44,14 +44,21 @@ public class PaymentServiceImpl implements PaymentService {
             List<Payment> paymentList = paymentDao.getAll();
             List<RegistrationFee> registrationFeesList =registrationFreeDao.getAll();
             List<GuestPayment>guestPaymentList =guestPaymentDao.getAll();
+            int counter = 1;
 
             for (Payment pay : paymentList) {
+                Member member = memberDao.get(pay.getMember().getId());
                 PaymentVO paymentVO = new PaymentVO();
                 paymentVO.setAmount(pay.getAmount());
                 paymentVO.setDate(commonFunction.convertDateToString(pay.getDate()));
                 paymentVO.setMemberId(pay.getMember().getId());
                 paymentVO.setStatus(pay.getRemark());
                 paymentVO.setId(pay.getId());
+                paymentVO.setName(member.getFirstName());
+                paymentVO.setGuestMobile(member.getMobileNumber());
+                paymentVO.setGuestNIC(member.getNic());
+                paymentVO.setPaymentCounter(counter);
+                counter++;
 
                 paymentVOList.add(paymentVO);
             }
@@ -60,8 +67,10 @@ public class PaymentServiceImpl implements PaymentService {
                 PaymentVO paymentVO = new PaymentVO();
                 paymentVO.setAmount(rg.getAmount());
                 paymentVO.setDate(commonFunction.convertDateToString(rg.getDate()));
-                paymentVO.setMemberId(rg.getMember().getId());
+                paymentVO.setMemberId(rg.getMember() !=null ? rg.getMember().getId():0);
                 paymentVO.setStatus("");
+                paymentVO.setPaymentCounter(counter);
+                counter++;
 
                 paymentVOList.add(paymentVO);
 
@@ -72,7 +81,13 @@ public class PaymentServiceImpl implements PaymentService {
                 paymentVO.setAmount(guest.getAmount());
                 paymentVO.setDate(commonFunction.convertDateToString(guest.getDate()));
                 paymentVO.setName(guest.getName());
-                paymentVO.setStatus("");
+                paymentVO.setStatus(guest.getRemark());
+                paymentVO.setMemberId(0L);
+                paymentVO.setGuestNIC(guest.getGuestNIC());
+                paymentVO.setGuestMobile(guest.getGuestMobile());
+                paymentVO.setId(guest.getId());
+                paymentVO.setPaymentCounter(counter);
+                counter++;
 
                 paymentVOList.add(paymentVO);
             }
@@ -91,13 +106,28 @@ public class PaymentServiceImpl implements PaymentService {
     public PaymentVO createPayment(PaymentVO paymentVO) throws Exception {
         try {
 
-            Member member =memberDao.get(paymentVO.getMemberId());
-            Payment payment =new Payment();
-            payment.setAmount(paymentVO.getAmount());
-            payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
-            payment.setMember(member);
-            payment.setRemark(paymentVO.getStatus());
-            paymentDao.save(payment);
+            if (paymentVO.getMemberId() == 0) {
+                GuestPayment guestPayment = new GuestPayment();
+                guestPayment.setGuestName(paymentVO.getGuestName());
+                guestPayment.setName(paymentVO.getGuestName());
+                guestPayment.setAmount(paymentVO.getAmount());
+                guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+                guestPayment.setGuestMobile(paymentVO.getGuestMobile());
+                guestPayment.setGuestNIC(paymentVO.getGuestNIC());
+                guestPayment.setRemark(paymentVO.getStatus());
+                guestPaymentDao.save(guestPayment);
+            } else {
+                Member member = memberDao.get(paymentVO.getMemberId());
+
+                Payment payment =new Payment();
+                payment.setAmount(paymentVO.getAmount());
+                payment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
+                payment.setMember(member);
+                payment.setRemark(paymentVO.getStatus());
+                paymentDao.save(payment);
+
+            }
+
 
             return paymentVO;
         } catch (Exception e) {
@@ -139,14 +169,16 @@ public class PaymentServiceImpl implements PaymentService {
 
 
             GuestPayment guestPayment =new GuestPayment();
+            guestPayment.setId(guestPayment.getId());
             guestPayment.setAmount(paymentVO.getAmount());
-            guestPayment.setName(paymentVO.getName());
+//            guestPayment.setName(paymentVO.getName());
             guestPayment.setDate(commonFunction.getDateTimeByDateString(paymentVO.getDate()));
             guestPayment.setRemark(paymentVO.getStatus());
             guestPayment.setGuestNIC(paymentVO.getGuestNIC());
             guestPayment.setGuestName(paymentVO.getGuestName());
             guestPayment.setGuestMobile(paymentVO.getGuestMobile());
             guestPaymentDao.save(guestPayment);
+
 
             return paymentVO;
         } catch (Exception e) {

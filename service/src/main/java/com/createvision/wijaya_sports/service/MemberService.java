@@ -13,6 +13,7 @@ public interface MemberService {
     public List<MemberVO> getAllMemberDetails() throws Exception;
     public MemberVO getMemberById(Long memberId) throws Exception;
     public UserDetailVO userLogin(UserDetailVO userDetailVO)throws Exception;
+    public MemberVO getMemberByNIC(String nic) throws Exception;
 
 
 

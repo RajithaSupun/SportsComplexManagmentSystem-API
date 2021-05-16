@@ -16,6 +16,8 @@ public class EmployeeVO {
     private String userName;
     private String password;
     private Long userId;
+    private int roleId;
+
 
 
 
@@ -64,4 +66,12 @@ public class EmployeeVO {
 
     public Long getUserId() {return userId;}
     public void setUserId(Long userId) {this.userId = userId;}
+
+    public int getRoleId() {
+       return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
 }

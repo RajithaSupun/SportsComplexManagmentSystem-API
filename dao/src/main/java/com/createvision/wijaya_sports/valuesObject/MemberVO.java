@@ -45,7 +45,7 @@ public class MemberVO {
     public String getJoinedDate() {return joinedDate;}
     public void setJoinedDate(String joinedDate) {this.joinedDate = joinedDate;}
 
-    public int getSportId() {return sportId;}
+    public long getSportId() {return sportId;}
     public void setSportId(int sportId) {this.sportId = sportId;}
 
     public String getMobileNumber() {return mobileNumber;}

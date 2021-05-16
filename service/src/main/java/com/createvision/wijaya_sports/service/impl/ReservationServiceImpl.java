@@ -31,10 +31,13 @@ public class ReservationServiceImpl implements ReservationService {
             for (Reservation res : reservations) {
                 ReservationVO reservationVO = new ReservationVO();
                 reservationVO.setFirstName(res.getFirstName());
+                reservationVO.setReservationId(res.getId());
                 reservationVO.setLastName(res.getLastName());
                 reservationVO.setDate(commonFunction.convertDateToString(res.getDate()));
                 reservationVO.setSport(res.getSport());
                 reservationVOList.add(reservationVO);
+                reservationVO.setContactNumber(res.getContactNumber());
+                reservationVO.setTime(res.getTime());
             }
             return reservationVOList;
         } catch (Exception e) {

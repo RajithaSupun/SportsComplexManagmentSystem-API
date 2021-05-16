@@ -34,6 +34,7 @@ public class ReportController {
             returnVO.setResult(reportVOList);
             return ResponseEntity.ok(returnVO);
         } catch (Exception e) {
+            e.printStackTrace();
             returnVO.setResult(e);
             returnVO.setStatusCode(5001);
             returnVO.setSuccess(false);

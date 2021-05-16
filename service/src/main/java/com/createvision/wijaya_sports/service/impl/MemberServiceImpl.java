@@ -69,6 +69,7 @@ public class MemberServiceImpl implements MemberService {
             for (RegistrationFeeVO rgis : memberVO.getRegistrationFee()) {
                 RegistrationFee registrationFee = new RegistrationFee();
                 registrationFee.setAmount(rgis.getAmount());
+                registrationFee.setMember(memberDao.get(memberVO.getMemberId()));
                 registrationFee.setDescription(rgis.getDescription());
                 registrationFee.setDate(commonFunction.getDateTimeByDateString(rgis.getDate()));
                 Long saveId = registrationFreeDao.save(registrationFee);
@@ -107,6 +108,15 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void deleteMember(Long memberId) throws Exception {
         try {
+
+            List<MemberSport> memberSportList =memberSportDao.getAll();
+
+            for (MemberSport m:memberSportList) {
+                if(m.getMember().getId() == memberId ){
+                    memberSportDao.delete(m);
+                }
+            }
+
             Member member = memberDao.get(memberId);
             memberDao.delete(member);
 
@@ -295,5 +305,10 @@ public class MemberServiceImpl implements MemberService {
             userDetailVO.setSuccess(false);
         }
         return userDetailVO;
+    }
+
+    @Override
+    public MemberVO getMemberByNIC(String nic) throws Exception {
+        return null;
     }
 }
