@@ -9,18 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="">
+    <list default="true" id="13a679fb-9282-439e-8a11-944c0a60ff7a" name="Default Changelist" comment="change method in update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/createvision/wijaya_sports/service/impl/ReservationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dao/target/classes/com/createvision/wijaya_sports/valuesObject/MemberVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/createvision/wijaya_sports/service/impl/MemberServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/createvision/wijaya_sports/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/Wijaya_Sports_Complex_API/WEB-INF/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/createvision/wijaya_sports/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +80,17 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat_server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="wijaya_sports_complex [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -281,13 +288,6 @@
       <workItem from="1620827974483" duration="7000" />
       <workItem from="1621055571902" duration="1372000" />
       <workItem from="1621164422505" duration="1414000" />
-    </task>
-    <task id="LOCAL-00024" summary="add payment controller and reservation controller">
-      <created>1610815336258</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1610815336258</updated>
     </task>
     <task id="LOCAL-00025" summary="add delete and update function in payment">
       <created>1611823208547</created>
@@ -625,11 +625,30 @@
       <option name="project" value="LOCAL" />
       <updated>1619894924398</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="change method in update">
+      <created>1621175471530</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1621175471530</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add mobile number to member table" />
@@ -641,7 +660,6 @@
     <MESSAGE value="add new function to get registration fee" />
     <MESSAGE value="add new function to save guest payment" />
     <MESSAGE value="set guest payment" />
-    <MESSAGE value="change method in update" />
     <MESSAGE value="remove gender ID when update" />
     <MESSAGE value="correct some errors" />
     <MESSAGE value="pass role id to UI" />
@@ -657,6 +675,7 @@
     <MESSAGE value="add reservation add function" />
     <MESSAGE value="add new column to guest payment table" />
     <MESSAGE value="add payment ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="add payment ID" />
+    <MESSAGE value="change method in update" />
+    <option name="LAST_COMMIT_MESSAGE" value="change method in update" />
   </component>
 </project>
