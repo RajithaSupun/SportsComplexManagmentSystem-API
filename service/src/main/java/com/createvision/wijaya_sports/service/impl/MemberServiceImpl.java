@@ -122,10 +122,10 @@ public class MemberServiceImpl implements MemberService {
     public void deleteMember(Long memberId) throws Exception {
         try {
 
-            List<MemberSport> memberSportList =memberSportDao.getAll();
+            List<MemberSport> memberSportList = memberSportDao.getAll();
 
-            for (MemberSport m:memberSportList) {
-                if(m.getMember().getId() == memberId ){
+            for (MemberSport m : memberSportList) {
+                if (m.getMember().getId() == memberId) {
                     memberSportDao.delete(m);
                 }
             }
@@ -192,23 +192,26 @@ public class MemberServiceImpl implements MemberService {
                 memberVO.setMobileNumber(member.getMobileNumber() != null ? member.getMobileNumber() : "");
                 Gender gender = genderDao.get(member.getGender().getId());
                 memberVO.setGenderId(gender.getId());
-                List<SportVO>sportVOList =new ArrayList<>();
-                List<MemberSport>memberSportList =memberSportDao.getAll();
-                for (MemberSport m:memberSportList) {
+                List<SportVO> sportVOList = new ArrayList<>();
+                List<MemberSport> memberSportList = memberSportDao.getAll();
+                for (MemberSport m : memberSportList) {
                     SportVO sportVO = new SportVO();
-                    if(m.getMember().getId() == member.getId()){
+                    if (m.getMember().getId() == member.getId()) {
 
-                        if(m.getName().trim().equals(Sports.valueOf("BADMINTON"))){
+                        if (m.getName().trim().equals("BADMINTON")) {
                             sportVO.setSportsId(1);
-                        }else if(m.getName().trim().equals(Sports.valueOf("SWIMMING"))){
+                            sportVO.setName("BADMINTON");
+                            sportVOList.add(sportVO);
+                        } else if (m.getName().trim().equals("SWIMMING")) {
                             sportVO.setSportsId(2);
-                        }else if(m.getName().trim().equals(Sports.valueOf("GYM"))){
+                            sportVO.setName("SWIMMING");
+                            sportVOList.add(sportVO);
+                        } else if (m.getName().trim().equals("GYM")) {
                             sportVO.setSportsId(3);
+                            sportVO.setName("GYM");
+                            sportVOList.add(sportVO);
                         }
                     }
-
-                    sportVOList.add(sportVO);
-
                 }
                 memberVO.setSportsIdList(sportVOList);
                 memberVOList.add(memberVO);

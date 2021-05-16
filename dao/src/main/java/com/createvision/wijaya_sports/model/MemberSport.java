@@ -13,7 +13,6 @@ public class MemberSport extends BaseObject implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Basic
     @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;
